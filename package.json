@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-border-gradients": "^2.0.3"
   }
 }

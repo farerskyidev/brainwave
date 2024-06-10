@@ -24,14 +24,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
   margin: 0;
   font-family: 'Sora', sans-serif;     
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #0E0C15;
+  -moz-osx-font-smoothing: grayscale; 
   ;
 }
 
@@ -44,14 +44,40 @@ a, button {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+header {
+  border-bottom: 1px solid #26242b;
+  position: absolute;
+}
+
+.bt--5 {
+  bottom: -5px;
+}
 .w-1920 {
   max-width: 1920px;
   margin: auto;
 }
+.custom-border {
+  border-width: 2px;
+  border-style: solid;
+  border-image-source: linear-gradient(180deg, #9099FC 0%, #D87CEE 100%);
+  border-image-slice: 1;
+}
+.bg-color {
+  background-color: #0E0C15;
+}
+.banner-wrapp {
+  max-width: 1248px;
+  margin: auto;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header a:hover {
+  color: white;
 }
 
 svg {

@@ -1,4 +1,6 @@
+
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -13,11 +15,16 @@ module.exports = {
     extend: {
       colors: {
         'whiteColor': '#ffffff',
-        'whiteColor-80': 'rgba( 255 , 255 , 255 , 0.502 )', 
-        'blackColor': '#000000' 
+        'whiteColor-50': 'rgba( 255 , 255 , 255 , 0.502 )', 
+        'blackColor': '#000000',
       },
+      lineHeight: {
+
+      }
     },
-  },
-  plugins: [],
+  }, 
+  plugins: [
+    require('tailwindcss-border-gradients')(),
+  ],
 }
 
