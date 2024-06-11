@@ -56,12 +56,54 @@ header {
   max-width: 1920px;
   margin: auto;
 }
-.custom-border {
-  border-width: 2px;
-  border-style: solid;
-  border-image-source: linear-gradient(180deg, #9099FC 0%, #D87CEE 100%);
-  border-image-slice: 1;
+
+.w-1440 {
+  max-width: 1440px;
+  margin: auto;
 }
+
+.slider-section .swiper { 
+  overflow: initial;
+}
+
+.slider-section .swiper .swiper-slide {
+  max-width: 384px;
+  height: 366px;
+  position: relative;
+  clip-path: polygon(85% 0, 100% 15%, 100% 100%, 0 100%, 0 0);
+    padding: 2px;
+}
+
+
+.slide_card {
+  clip-path: polygon(85% 0, 100% 15%, 100% 100%, 0 100%, 0 0);
+  background-color: #0E0C15;
+}
+
+.slide_card:hover .hidden {
+  display: block; 
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide_card:hover p {
+  color: white;
+}
+
+.slider-section .swiper .swiper-slide:before {
+  content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(180deg, #9099FC 0%, #D87CEE 100%);
+}
+
 .bg-color {
   background-color: #0E0C15;
 }
@@ -69,7 +111,42 @@ header {
   max-width: 1248px;
   margin: auto;
 }
+.margin-a { 
+  margin: auto;
+}
 
+.border-gradient-cut {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(85% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+  padding: 2px;
+}
+
+.border-gradient-cut:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(180deg, #9099FC 0%, #D87CEE 100%);
+}
+
+
+.border-gradient-content-cut button {
+  clip-path: polygon(85% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+}
+
+.border-gradient {
+  padding: 2px;
+  background: linear-gradient(180deg, #9099FC 0%, #D87CEE 100%);
+}
+
+.bgHorLine {
+  background-color: #26242b;   
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

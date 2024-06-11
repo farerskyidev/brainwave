@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     screens: {
       '3xl': '1920px',
-      '2xl': '1440px', 
+      '2xl': '1440px',  
       'xl': '1200px',
       '2sm': '375px'
     },
@@ -17,6 +17,8 @@ module.exports = {
         'whiteColor': '#ffffff',
         'whiteColor-50': 'rgba( 255 , 255 , 255 , 0.502 )', 
         'blackColor': '#000000',
+        'JaguarColor': '#26242b',
+        'purpleColor': '#ADA8C3', 
       },
       lineHeight: {
 
