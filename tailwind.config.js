@@ -19,6 +19,8 @@ module.exports = {
         'blackColor': '#000000',
         'JaguarColor': '#26242b',
         'purpleColor': '#ADA8C3', 
+        'purpleColor2': '#B6B1C8',  
+        
       },
       lineHeight: {
 

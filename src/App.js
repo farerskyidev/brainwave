@@ -19,7 +19,7 @@ export class App extends React.Component {
               <Route exact path='/' element={<Home />} />
               <Route exact path='/features' element={<Features/>}/>
               <Route exact path='/pricing' element={<Pricing/>}/>
-              <Route exact path='/how-to-use' element={<HowToUse/>}/>
+              <Route exact path='/how-to-use' element={<HowToUse/>}/> 
               <Route exact path='/roadmap' element={<Roadmap/>}/>
               <Route exact path='/new-account' element={<NewAccount/>}/>
             </Routes>

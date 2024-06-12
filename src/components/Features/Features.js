@@ -4,8 +4,8 @@ import React from 'react';
 function AboutPage() {
   return (
     <section className='bg-color'>
-      <div class="grid-x grid-padding-x">
-          <div class="cell">
+      <div className="grid-x grid-padding-x">
+          <div className="cell">
 
               <h1>Про нас</h1>
             

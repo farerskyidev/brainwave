@@ -29,10 +29,10 @@ export const Header = () => {
             <div className="cell large-3 flex justify-end">
               <div className="flex gap-x-8 items-center">
                 <NavLink className='text-xs font-semibold text-whiteColor-50' to="/new-account">New Account</NavLink> 
-                <div class=" rounded-xl w-fit margin-a">
-                  <div class="border-gradient-cut rounded-xl w-fit margin-a">
-                    <div class="border-gradient-content-cut">
-                      <button class="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white">
+                <div className=" rounded-xl w-fit margin-a">
+                  <div className="border-gradient-cut rounded-xl w-fit margin-a">
+                    <div className="border-gradient-content-cut">
+                      <button className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white">
                           sign in
                       </button>     
                     </div>

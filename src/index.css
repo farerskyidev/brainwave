@@ -20,6 +20,8 @@
   src: local('Sora'), url('./fonts/SourceCodePro-SemiBold.ttf') format('truetype');
 }
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -38,12 +40,27 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Sora', sans-serif; 
 }
+li {
+  list-style-type: circle;
+}
 a, button {
   font-family: 'SourceCodePro-SemiBold', sans-serif;
   text-transform: uppercase;
   font-size: 0.75rem;
   line-height: 1rem;
 }
+
+li::marker {
+  content: "";
+  display: inline-block;
+  width: 20px; /* Установите ширину и высоту изображения маркера */
+  height: 20px;
+  background-image: url('./images/03.png'); /* Замените путь_к_изображению на путь к вашему изображению */
+  background-size: cover; /* Растянуть изображение, чтобы оно полностью покрыло маркер */
+  margin-right: 10px;
+  background-size: contain; /* Отступ от текста */
+}
+
 header {
   border-bottom: 1px solid #26242b;
   position: absolute;
@@ -91,6 +108,21 @@ header {
 .slide_card:hover p {
   color: white;
 }
+.slider-section-second {
+  border: 1px solid #26242b;
+}
+.slider-section-second article {
+  width: 553px;
+  height: 576px;
+  border: 1px solid rgba(244, 244, 244, 0.17);
+}
+
+.slider-section-second article img{
+  max-width: 512px;
+  max-height: 512px;
+  left: -64px;
+  bottom: -64px;
+}
 
 .slider-section .swiper .swiper-slide:before {
   content: '';
@@ -103,6 +135,29 @@ header {
     border-radius: inherit;
     background: linear-gradient(180deg, #9099FC 0%, #D87CEE 100%);
 }
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #000; /* Колір вашого вибору */
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer; 
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
 
 .bg-color {
   background-color: #0E0C15;
