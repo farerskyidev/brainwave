@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import Features from './components/Features/Features';
 import Pricing from './components/Pricing/Pricing';
 import HowToUse from './components/HowToUse/HowToUse';
@@ -23,6 +24,7 @@ export class App extends React.Component {
               <Route exact path='/roadmap' element={<Roadmap/>}/>
               <Route exact path='/new-account' element={<NewAccount/>}/>
             </Routes>
+            <Footer />
           </div>
         </BrowserRouter>
       </div>

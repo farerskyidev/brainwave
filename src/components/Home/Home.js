@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -20,6 +19,10 @@ import chevron_right from "../../images/chevron-right.svg";
 import hover_image from "../../images/hover_image.png";
 import eclipse from "../../images/eclipse.svg";
 import gradient_abstract from "../../images/gradient-abstract.svg";
+import img_122 from "../../images/img_122.png";
+import img from "../../images/IMG.png";
+
+
 
 function Home() {
 
@@ -196,7 +199,7 @@ function Home() {
       </section> 
 
       
-    <section className='bg-color pt-28 relative overflow-hidden pb-40 slider-section-second'>
+    <section className='bg-color pt-28 relative overflow-hidden pb-40 slider-section-second border-b'>
         <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
           <div className="cell large-6"> 
               <div className="max-w-2xl mx-auto mb-20 max-w-sm">
@@ -267,9 +270,105 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="cell large-6">
+        <div className="cell large-6 max-w-md m-auto">
           <p className='text-x text-purpleColor2 mb-8'>With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.</p>
+          <img className="" src={img_122} alt="img_122" />      
         </div>
+      </div>
+    </section>
+    <section className='bg-color pt-28 relative overflow-hidden pb-40'>
+      <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
+        <div className="cell large-6">
+          <img className="" src={img} alt="img" />   
+        </div>
+        <div className="cell large-6">
+          <div className="max-w-2xl mx-auto mb-20 max-w-xl">
+            <h2 className='text-5xl leading-[3.75rem] mb-6'>Unlock the power of AI</h2>
+            <p className='text-x text-purpleColor2 mb-10'>Connect with the AI chatbot to start the conversation. The chatbot uses natural language processing to understand your queries and provide relevant responses.</p>
+            <div className=" rounded-xl w-fit">
+                <div className="border-gradient-cut rounded-xl w-fit">
+                    <div className="border-gradient-content-cut">
+                        <button className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white">
+                        connect now
+                        </button>     
+                    </div>
+                </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div className='mt-20'>
+      <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
+          <div className="cell large-3 medium-6 small-12">
+            <article className='relative unlock-card pt-10'>
+              <div className='max-w-64	'>
+                <p className='text-xs text-oldLavender mb-1'>01.</p>
+                <h5 className='h-16'>Sign up</h5>
+                <p className='text-purpleColor2 mt-2.5'>Create an account with Brainwave - AI chat app by providing your name, email</p>
+              </div>
+            </article>
+          </div>
+          <div className="cell large-3 medium-6 small-12">
+            <article className='relative unlock-card pt-10'>
+              <div className='max-w-64	'>
+                <p className='text-xs text-oldLavender mb-1'>02.</p>
+                <h5 className='h-16'>Connect with AI Chatbot</h5>
+                <p className='text-purpleColor2 mt-2.5'>Create an account with Brainwave - AI chat app by providing your name, email</p>
+              </div>
+            </article>
+          </div>
+          <div className="cell large-3 medium-6 small-12">
+            <article className='relative unlock-card pt-10'>
+              <div className='max-w-64	'>
+                <p className='text-xs text-oldLavender mb-1'>03.</p>
+                <h5 className='h-16'>Get Personalized Recommendations</h5>
+                <p className='text-purpleColor2 mt-2.5'>Create an account with Brainwave - AI chat app by providing your name, email</p>
+              </div>
+            </article>
+          </div>
+          <div className="cell large-3 medium-6 small-12">
+            <article className='relative unlock-card pt-10'>
+              <div className='max-w-64	'>
+                <p className='text-xs text-oldLavender mb-1'>04.</p>
+                <h5 className='h-16'>Explore and Engage</h5>
+                <p className='text-purpleColor2 mt-2.5'>Create an account with Brainwave - AI chat app by providing your name, email</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+        
+    </section>
+
+
+    <section className='bg-color pt-28 relative overflow-hidden pb-40'>
+      <div className="grid-x grid-padding-x justify-center py-5 relative w-1440">
+        <div className='max-w-2xl text-center'>
+          <h1>Be part of the future of <span>Brainwave</span></h1>
+          <p className='text-xl text-oldLavender'>Unleash the power of AI within Brainwave. Upgrade your productivity with Brainwave, the open AI chat app.</p>
+
+        </div>
+        <div className='gradient-pre-footer' >
+          <svg width="744" height="744" viewBox="0 0 744 744" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.05" cx="372" cy="372" r="371.5" stroke="#CAC6DD"/>
+          <circle opacity="0.1" cx="371.999" cy="372" r="313.673" stroke="#CAC6DD"/>
+          <circle opacity="0.1" cx="372" cy="372" r="244.519" stroke="#CAC6DD"/>
+          <circle opacity="0.1" cx="371.999" cy="372" r="171.788" stroke="#CAC6DD"/>
+          <circle opacity="0.1" cx="371.999" cy="372" r="109.788" stroke="#CAC6DD"/>
+          </svg>
+        </div>
+        
+
+      
+      </div>
+      <div>
+      
+
+
+
+
+
+
       </div>
     </section>
     </div>

@@ -20,6 +20,8 @@ module.exports = {
         'JaguarColor': '#26242b',
         'purpleColor': '#ADA8C3', 
         'purpleColor2': '#B6B1C8',  
+        'oldLavender': '#757185'
+        
         
       },
       lineHeight: {
