@@ -90,6 +90,16 @@ header {
     left: calc(50% - 372px);
 }
 
+.border-span {
+  position: relative;
+  display: inline-block;
+}
+.border-span svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .bt--5 {
   bottom: -5px;
 }
