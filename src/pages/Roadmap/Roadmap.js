@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Pricing() {
+function AboutPage() {
   return (
     <section className='bg-color'>
       <div className="grid-x grid-padding-x">
@@ -14,8 +14,8 @@ function Pricing() {
             
           </div>
         </div>
-    </section>
-  );
+    </section> 
+  ); 
 }
 
-export default Pricing;
+export default AboutPage;

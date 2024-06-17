@@ -13,7 +13,7 @@ export const Header = () => {
           <div className="grid-x grid-padding-x size-full items-center py-5 relative">
             <div className="cell large-3"> 
               <div>
-                  <a href="/"><img src={logo} alt="logo" /></a> 
+                  <a href="/"><img src={logo} alt="logo" /></a>  
               </div>
             </div>
             <div className="cell large-6"> 

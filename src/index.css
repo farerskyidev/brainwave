@@ -82,6 +82,19 @@ header {
   position: absolute;
 }
 
+.codepro-reg {
+  font-family: 'SourceCodePro-Regular', sans-serif; 
+}
+.testimonials {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(14, 12, 21, 1);
+}
+
+
+.testimonials_bottom {
+  background-color: #15131D;
+}
+
 .gradient-pre-footer {
   position: absolute;
     height: auto;

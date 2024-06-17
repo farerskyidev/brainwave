@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react"; 
 
-
-function AboutPage() {
+export const NewAccount = () => { 
   return (
+      
     <section className='bg-color'>
       <div className="grid-x grid-padding-x">
           <div className="cell">
@@ -14,8 +14,11 @@ function AboutPage() {
             
           </div>
         </div>
-    </section>
-  ); 
+    </section> 
+    
+  );
 }
 
-export default AboutPage;
+export default NewAccount; 
+
+

@@ -6,7 +6,7 @@ import logo from "../../images/logo.svg";
 
 
 export const Footer = () => {
-  return (
+  return ( 
       
       <footer className="bg-color relative"> 
       
@@ -116,7 +116,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="pb-10">
-        </div>
+        </div> 
       </footer>
     
   );
