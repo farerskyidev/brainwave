@@ -9,7 +9,6 @@ import HowToUse from './pages/HowToUse/HowToUse';
 import Roadmap from './pages/Roadmap/Roadmap';
 import Home from './pages/Home/Home';
 import NewAccount from './pages/NewAccount/NewAccount';
-import Testimonials from './sections/Testimonials';
 
 function App() {
   const [posts, setPosts] = useState([]);

@@ -1,22 +1,14 @@
 import React from 'react';
+import FeaturesSection from '../../sections/FeaturesSection';
+import Prefooter from '../../sections/Prefooter';
 
-
-function AboutPage() {
-  return (
-    <section className='bg-color'>
-      <div className="grid-x grid-padding-x">
-          <div className="cell">
-
-              <h1>Про нас</h1>
-            
-            
-              <p>Це сторінка "Про нас". Тут може бути будь-який контент, який ви хочете відобразити.</p>
-            
-          </div> 
-        </div>
-    </section>
-    
+function Features() {
+  return ( 
+    <main>  
+      <FeaturesSection /> 
+      <Prefooter />  
+    </main>
   );
 }
 
-export default AboutPage;
+export default Features;

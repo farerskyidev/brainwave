@@ -55,7 +55,9 @@ h1 {
 h5 {
   font-size: 1.5rem;
 }
-
+h6 {
+  font-size: 1.25rem;
+}
 li {
   list-style-type: circle;
 }
@@ -69,17 +71,34 @@ a, button {
 li::marker {
   content: "";
   display: inline-block;
-  width: 20px; /* Установите ширину и высоту изображения маркера */
+  width: 20px;
   height: 20px;
-  background-image: url('./images/03.png'); /* Замените путь_к_изображению на путь к вашему изображению */
-  background-size: cover; /* Растянуть изображение, чтобы оно полностью покрыло маркер */
+  background-image: url('./images/03.png');
+  background-size: cover;
   margin-right: 10px;
-  background-size: contain; /* Отступ от текста */
+  background-size: contain;
 }
 
 header {
   border-bottom: 1px solid #26242b;
   position: absolute;
+}
+
+.feature-text p {
+  color: #ADA8C3;
+}
+
+.accordion {
+  background: transparent;
+}
+
+.accordion__button {
+  background-color: transparent;
+  color: white;
+}
+
+.accordion__button:hover {
+  background-color: transparent;
 }
 
 .codepro-reg {

@@ -14,14 +14,14 @@ function Home() {
 
 
   return ( 
-    <div>
+    <main>
       <BannerSection /> 
       <SliderCards /> 
       <SliderOneCard /> 
       <Colaboration /> 
       <Unlock /> 
       <Prefooter />   
-    </div>
+    </main>
   );
 }
 

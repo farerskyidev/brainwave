@@ -10,7 +10,7 @@ export const Footer = () => {
       
       <footer className="bg-color relative"> 
       
-        <div className="w-1440 border-vert">
+        <div className="w-1440">
           <div className="grid-x grid-padding-x size-full items-center py-5 relative border-b">
             <div className="cell large-6">
               <div>

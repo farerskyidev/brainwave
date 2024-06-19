@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ava_1 from "../images/ava_1.png";
 
 const Testimonials = () => {
   const [posts, setPosts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [featureImages, setFeatureImages] = useState({});
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get('http://brainwave.local/wp-json/wp/v2/posts');
+        const postsData = await Promise.all(response.data.map(async post => {
+          // Fetch featured media URL if featured_media is not 0
+          if (post.featured_media !== 0) {
+            const mediaResponse = await axios.get(`http://brainwave.local/wp-json/wp/v2/media/${post.featured_media}`);
+            post.featured_media_url = mediaResponse.data.source_url;
+          }
+          return post;
+        }));
         setPosts(response.data);
         setLoading(false);
-        const fetchedPosts = response.data.map(post => ({
-          // id: post.id,
-          // title: post.title.rendered,
-          // content: post.content.rendered,
-          // categories: post.categories,
-          featuredImage: post._embedded && post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : null
-        })); // Set loading to false once data is fetched
       } catch (error) {
         console.error('Error fetching posts:', error);
         setLoading(false); // Ensure loading is set to false in case of error too
@@ -36,7 +37,7 @@ const Testimonials = () => {
     };
 
     fetchPosts();
-    fetchCategories();
+    fetchCategories(); 
   }, []);
 
   const getCategoryNames = (categoryIds) => {
@@ -45,7 +46,7 @@ const Testimonials = () => {
       const category = categories.find(cat => cat.id === categoryId);
       if (category) {
         names.push(category.name);
-      }
+      } 
     });
     return names.join(', ');
   };
@@ -56,8 +57,8 @@ const Testimonials = () => {
   return (
     <section className='bg-color pt-28 relative overflow-hidden pb-40'>
       <div className="mx-auto mb-16 text-center">
-        <p className='text-x text-purpleColor mb-4'>Готові почати</p>
-        <h2 className='text-5xl leading-[3.75rem] mb-6'>Що говорить спільнота</h2>
+        <p className='text-x text-purpleColor mb-4'>ready to get started</p>
+        <h2 className='text-5xl leading-[3.75rem] mb-6'>What the community is saying</h2>
       </div> 
       
       {loading ? (
@@ -82,9 +83,9 @@ const Testimonials = () => {
                     )} 
                   </div>
                   <div>
- {post.featuredImage && (
-                  <img src={post.featuredImage} alt={post.title.rendered} className="w-full h-auto rounded-t-2xl" />
-                )}
+                  {post.featured_media_url && (
+                    <img src={post.featured_media_url} alt="Feature" />
+                  )} 
                   </div>
                 </div>
               </article>

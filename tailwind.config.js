@@ -21,7 +21,7 @@ module.exports = {
         'purpleColor': '#ADA8C3', 
         'purpleColor2': '#B6B1C8',  
         'oldLavender': '#757185',
-        
+        'lavenderGrey': '#CAC6DD',   
       },
       lineHeight: {
 
