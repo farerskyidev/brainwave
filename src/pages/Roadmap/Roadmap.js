@@ -1,21 +1,17 @@
 import React from 'react';
 
+import Prefooter from '../../sections/Prefooter';
+import RoadmapSection from '../../sections/RoadmapSection';
 
-function AboutPage() {
+function Roadmap () {
+  
   return (
-    <section className='bg-color'>
-      <div className="grid-x grid-padding-x">
-          <div className="cell">
+    <main>
 
-              <h1>Про нас</h1>
-            
-            
-              <p>Це сторінка "Про нас". Тут може бути будь-який контент, який ви хочете відобразити.</p>
-            
-          </div>
-        </div>
-    </section> 
-  ); 
+      <Prefooter /> 
+      <RoadmapSection />
+    </main>
+  );  
 }
 
-export default AboutPage;
+export default Roadmap;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import ava_1 from "../images/ava_1.png";
+
 
 const Testimonials = () => {
   const [posts, setPosts] = useState([]);
