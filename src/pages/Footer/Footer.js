@@ -10,8 +10,8 @@ export const Footer = () => {
       
       <footer className="bg-color relative"> 
       
-        <div className="w-1440">
-          <div className="grid-x grid-padding-x size-full items-center py-5 relative border-b">
+        <div className="w-1920">
+          <div className="grid-x grid-padding-x size-full items-center py-5 relative border-bt">
             <div className="cell large-6">
               <div>
                   <a href="/"><img src={logo} alt="logo" /></a> 

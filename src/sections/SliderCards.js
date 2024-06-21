@@ -26,26 +26,32 @@ const SliderCards = () => {
               pagination={{ clickable: true }}
             > 
               <SwiperSlide>
-                <article className='p-10 h-full flex flex-wrap slide_card hover:cursor-pointer relative'>
-                  <div className='z-10'>
-                    <div>
-                      <h5 className='text-2xl mb-5'>Ask anything</h5>
-                      <p className='text-purpleColor'>Lets users quickly find answers to their questions without having to search through multiple sources.</p>
-                    </div>
-                    <div className='flex items-end size-full'>
-                      <div className='size-full flex items-center justify-between'>
-                          <img className="" src={icon_01} alt="icon_01" /> 
-                        <a className="flex items-center gap-5 text-xs" href='/'>explore more
-                          <img src={chevron_right} alt="chevron_right"/>
-                        </a>
+                <article className=' h-full flex flex-wrap slide_card hover:cursor-pointer'>
+                  <div className='p-10 slide_card_wrapp'>
+                    <div className='z-10 block h-full relative'>
+                      <div>
+                        <h5 className='text-2xl mb-5'>Ask anything</h5>
+                        <p className='text-purpleColor'>Lets users quickly find answers to their questions without having to search through multiple sources.</p>
                       </div>
-                    </div>
+                      <div className='flex items-end size-full'>
+                        <div className='size-full flex items-center justify-between'>
+                            <img className="" src={icon_01} alt="icon_01" /> 
+                          <a className="flex items-center gap-5 text-xs" href='/'>explore more
+                            <img src={chevron_right} alt="chevron_right"/>
+                          </a>
+                        </div>
+                      </div>
+                    
                   </div>
-                  <img className='absolute hidden' src={hover_image} alt="hover_image"/>
+                  </div>
+                    <div className='absolute hidden' >
+                      <img className='' src={hover_image} alt="hover_image"/>          
+                    </div>
+
                 </article>
               </SwiperSlide>
               <SwiperSlide>
-                <article className='p-10 h-full flex flex-wrap slide_card hover:cursor-pointer relative'>
+                <article className='p-10 h-full flex flex-wrap slide_card hover:cursor-pointer relative'> 
                   <div className='z-10'>
                     <div>
                       <h5 className='text-2xl mb-5'>Ask anything</h5>

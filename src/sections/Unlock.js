@@ -1,6 +1,7 @@
 import React from 'react';
 import img from "../images/IMG.png";
-
+import bracket_1 from "../images/bracket_1.png";
+import bracket_2 from "../images/bracket_2.png"; 
 
 const Unlock = () => {
   return (
@@ -11,7 +12,12 @@ const Unlock = () => {
           </div>
           <div className="cell large-6">
             <div className="max-w-2xl mx-auto mb-20 max-w-xl">
-              <h2 className='text-5xl leading-[3.75rem] mb-6'>Unlock the power of AI</h2>
+              <span className='text-purpleColor relative px-4 text-xs roadmap-span z-10'> 
+                <img className="absolute top-0 left-0" src={bracket_2} alt="bracket_2" /> 
+                how it work: 02.
+                <img className="absolute top-0 right-0" src={bracket_1} alt="bracket_1" /> 
+              </span>
+              <h2 className='text-5xl leading-[3.75rem] mb-6 mt-6'>Unlock the power of AI</h2>
               <p className='text-x text-purpleColor2 mb-10'>Connect with the AI chatbot to start the conversation. The chatbot uses natural language processing to understand your queries and provide relevant responses.</p>
               <div className=" rounded-xl w-fit">
                   <div className="border-gradient-cut rounded-xl w-fit">

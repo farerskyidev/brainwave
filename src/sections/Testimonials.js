@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import bracket_1 from "../images/bracket_1.png";
+import bracket_2 from "../images/bracket_2.png"; 
 
 const Testimonials = () => {
   const [posts, setPosts] = useState([]);
@@ -57,7 +58,12 @@ const Testimonials = () => {
   return (
     <section className='bg-color pt-28 relative overflow-hidden pb-40'>
       <div className="mx-auto mb-16 text-center">
-        <p className='text-x text-purpleColor mb-4'>ready to get started</p>
+
+        <span className='text-purpleColor relative px-4 text-xs roadmap-span z-10'> 
+          <img className="absolute top-0 left-0" src={bracket_2} alt="bracket_2" /> 
+          ready to get started
+          <img className="absolute top-0 right-0" src={bracket_1} alt="bracket_1" /> 
+        </span>
         <h2 className='text-5xl leading-[3.75rem] mb-6'>What the community is saying</h2>
       </div> 
       

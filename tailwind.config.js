@@ -22,9 +22,19 @@ module.exports = {
         'purpleColor2': '#B6B1C8',  
         'oldLavender': '#757185',
         'lavenderGrey': '#CAC6DD',   
+        'customBorder': '#252134',
       },
       lineHeight: {
 
+      },
+      borderWidth: {
+        DEFAULT: '1px',
+        '0': '0',
+        '2': '2px',
+        '3': '3px',
+        '4': '4px',
+        '6': '6px',
+        '8': '8px',
       }
     },
   }, 

@@ -7,9 +7,9 @@ function Roadmap () {
   
   return (
     <main>
-
-      <Prefooter /> 
       <RoadmapSection />
+      <Prefooter /> 
+      
     </main>
   );  
 }

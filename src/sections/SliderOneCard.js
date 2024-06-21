@@ -10,7 +10,7 @@ import 'swiper/css';
 
 const SliderOneCard = () => {
   return (
-    <section className='bg-color pt-28 relative overflow-hidden pb-40 slider-section-second border-b'>
+    <section className='bg-color pt-28 relative overflow-hidden pb-40 slider-section-second border-b border-customBorder'>
           <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
             <div className="cell large-6"> 
                 <div className="max-w-2xl mx-auto mb-20 max-w-sm">
