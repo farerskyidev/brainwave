@@ -7,15 +7,20 @@ module.exports = {
   ],
   theme: {
     screens: {
-      '3xl': '1920px',
-      '2xl': '1440px',  
-      'xl': '1200px',
-      '2sm': '375px'
+      '3xl': '1921px',
+      '2xl': '1441px',  
+      'xl': '1201px',
+      'x': '1025px',
+      'm': '769px',
+      'sm': '376px' 
     },
     extend: {
       colors: {
+        
+        'bgColor': '#0E0C15',
         'whiteColor': '#ffffff',
         'whiteColor-50': 'rgba( 255 , 255 , 255 , 0.502 )', 
+        'whiteColor-15': 'rgba( 255 , 255 , 255 , 0.15 )',
         'blackColor': '#000000',
         'JaguarColor': '#26242b',
         'purpleColor': '#ADA8C3', 
@@ -35,7 +40,14 @@ module.exports = {
         '4': '4px',
         '6': '6px',
         '8': '8px',
-      }
+      },
+      spacing: {
+        '60': '60px', 
+        '62': '62px',
+        '84': '84px',
+        '100': '100px',
+        '136': '136px',
+      },
     },
   }, 
   plugins: [

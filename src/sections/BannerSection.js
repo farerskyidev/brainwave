@@ -8,7 +8,7 @@ import logo_4 from "../images/logo_4.png";
 
 const BannerSection = () => {
   return (
-    <section className='bg-color pt-28 relative'>
+    <section className='bg-color pt-14 m:pt-20 x:pt-28 relative'>    
         <div className=" text-center banner-wrapp">
           <div className="max-w-4xl mx-auto">
             <h1 className='text-6xl leading-[4.5rem]'>Explore the Possibilities of AI Chatting with Brainwave</h1>
@@ -17,10 +17,10 @@ const BannerSection = () => {
                 <div className="border-gradient-content-cut">
                     <button className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white">
                         sign in
-                    </button>      
+                    </button>       
                 </div>
             </div>
-            <div className="border-gradient rounded-xl mt-24 mb-20">
+            <div className="border-gradient rounded-xl mt-62 m:mt-20 x:mt-28 2xl:mt-100 mb-11 m:mb-100 x:mb-84 xl:mb-20">
               <div className="border-gradient-content">
                 <img className='rounded-xl relative z-10' src={banner_img} alt="banner_img"/>     
               </div>
@@ -31,9 +31,9 @@ const BannerSection = () => {
           <img className="absolute left-2.5 bt--5 z-10" src={plus} alt="plus" /> 
           <img className="absolute right-2.5 bt--5 z-10" src={plus} alt="plus" />
         </div> 
-        <div className='text-center	'>
+        <div className='text-center	h-0 x:h-auto'>
           <p className='text-whiteColor-50 mb-16 text-xs uppercase'>Helping people create beautiful content at</p>
-          <div className='flex justify-center gap-x-24'>
+          <div className='flex justify-center xl:gap-x-24 gap-x-16'>
             <img className="" src={logo_1} alt="logo_1" />
             <img className="" src={logo_2} alt="logo_2" />
             <img className="" src={logo_3} alt="logo_3" />

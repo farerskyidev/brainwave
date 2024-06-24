@@ -5,7 +5,7 @@ import bracket_2 from "../images/bracket_2.png";
 
 const Unlock = () => {
   return (
-    <section className='bg-color pt-28 relative overflow-hidden pb-40'>
+    <section className='bg-color pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden'>
         <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
           <div className="cell large-6">
             <img className="" src={img} alt="img" />   

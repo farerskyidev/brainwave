@@ -12,11 +12,11 @@ import 'swiper/css';
 
 const SliderCards = () => {
   return (
-    <section className='bg-color pt-28 relative overflow-hidden'>
-        <div className="max-w-2xl mx-auto mb-20">
-          <h2 className='text-5xl	text-center leading-[3.75rem]'>Chat Smarter, Not Harder with Brainwave</h2>
+    <section className='bg-color pt-28 relative overflow-hidden'> 
+        <div className="max-w-2xl mx-auto">  
+          <h2 className='text-5xl	text-left m:text-center leading-[3.75rem]'>Chat Smarter, Not Harder with Brainwave</h2>
         </div>
-          <div className="grid-x grid-padding-x items-center py-5 relative w-1440 slider-section">
+          <div className="grid-x grid-padding-x items-center relative w-1440 slider-section py-10 m:py-20">  
             <div className='pl-20'>
             <Swiper
               spaceBetween={50}

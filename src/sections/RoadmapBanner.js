@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import bracket_1 from "../images/bracket_1.png";
-import bracket_2 from "../images/bracket_2.png"; 
+import banner_img from "../images/banner_img.png"; 
+import banner_img_coins from "../images/banner_img_coins.png"; 
 
-const RoadmapSection = () => {
+const RoadmapBanner = () => {
   const [pageData, setPageData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [images, setImages] = useState({});
@@ -63,40 +62,29 @@ const RoadmapSection = () => {
   }
 
   return (
-    <section className='bg-color relative overflow-hidden pb-20 pt-20'>
-      <div className="grid-x grid-padding-x relative w-1440 pt-20">
-      {pageData.acf.roadmap.map((item, index) =>
-          <div key={index} className="cell large-12 medium-12 small-12">
-            <div className="grid-x grid-padding-x">
-              <div className="cell large-4 small-12 pt-10 pb-10">
-                <div className='text-center mt-10 relative'> 
-                  <span className='text-purpleColor relative px-4 text-xs roadmap-span z-10'> 
-                    <img className="absolute top-0 left-0" src={bracket_2} alt="bracket_2" /> 
-                    {item.data}
-                    <img className="absolute top-0 right-0" src={bracket_1} alt="bracket_1" /> 
-                  </span>
-                  <div className='roadmap-span-wrapp'></div>
+    <section className='bg-color pt-14 m:pt-20 x:pt-28 relative'>    
+        <div className=" text-center banner-wrapp">
+          <div className="max-w-4xl mx-auto">
+            <h1 className='text-6xl leading-[4.5rem]'>{pageData.acf.roadmap_banner_title}</h1>
+            <p className='text-xl leading-8 mb-7 max-w-3xl mx-auto text-whiteColor-50'>{pageData.acf.roadmap_banner_text}</p>  
+            <div className="border-gradient-cut rounded-xl w-fit margin-a">
+                <div className="border-gradient-content-cut">
+                    <button className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white">
+                        sign in
+                    </button>       
                 </div>
-              </div>
-              <div className="cell large-8 small-12 pt-10 pb-10 border-b border-l border-customBorder">
-                <figure className='mt-8 flex items-start gap-x-4'>
-                <div>
-                  {item.image && (
-                      <img src={`http://brainwave.local/wp-json/wp/v2/media/${item.image}`} alt="Feature" />
-                    )}
-                  </div>
-                  <div className='w-fit'>
-                    <h5>{item.title}</h5>
-                    <div className='text-purpleColor mt-6 feature-text'>{item.text}</div>
-                  </div>
-                </figure>
-              </div>
             </div>
+            <div className="relative mt-62 m:mt-20 x:mt-28 2xl:mt-100">
+              <div className="rounded-xl border-gradient border-gradient-content">
+                <img className='relative z-10' src={banner_img} alt="banner_img"/>      
+              </div>
+              <img className='absolute -top-1/4 left-1/4 z-10' src={banner_img_coins} alt="banner_img_coins"/> 
+            </div>
+
           </div>
-        )}
-      </div>
-    </section>
+        </div>
+      </section>
   );
 }
 
-export default RoadmapSection;
+export default RoadmapBanner;

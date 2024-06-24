@@ -10,7 +10,7 @@ const Prefooter = () => {
 
       
         <div className="grid-x grid-padding-x justify-center py-5 relative w-1920">
-          <div className='max-w-2xl text-center'>
+          <div className='max-w-2xl text-center z-10'>
             <h1>Be part of the future of <span className='border-span'>Brainwave
               </span></h1>
             <p className='text-xl text-oldLavender mb-8'>Unleash the power of AI within Brainwave. Upgrade your productivity with Brainwave, the open AI chat app.</p>
@@ -24,7 +24,7 @@ const Prefooter = () => {
               </div>
             </div>
           </div>
-          <div className='gradient-pre-footer' >
+          <div className='gradient-pre-footer -z-1' >
             <svg width="744" height="744" viewBox="0 0 744 744" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle opacity="0.05" cx="372" cy="372" r="371.5" stroke="#CAC6DD"/>
             <circle opacity="0.1" cx="371.999" cy="372" r="313.673" stroke="#CAC6DD"/>

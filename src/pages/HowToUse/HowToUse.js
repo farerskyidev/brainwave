@@ -2,12 +2,18 @@ import React from 'react';
 
 import Contacts from '../../sections/Contacts';
 
-function Features() {
+function HowToUse() {
+
+
+
+ 
   return ( 
     <main>  
+      
+      
       <Contacts />  
     </main>
   );
 }
 
-export default Features;
+export default HowToUse;
