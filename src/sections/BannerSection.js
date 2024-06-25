@@ -41,6 +41,8 @@ const BannerSection = () => {
           </div>
           
         </div>
+        <img className="absolute left-2.5 top--5 z-10" src={plus} alt="plus" /> 
+          <img className="absolute right-2.5 top--5 z-10" src={plus} alt="plus" />
       </section> 
   );
 }

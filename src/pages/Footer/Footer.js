@@ -14,12 +14,12 @@ export const Footer = () => {
           <div className="grid-x grid-padding-x size-full items-center py-5 relative border-bt">
             <div className="cell large-6">
               <div>
-                  <a href="/"><img src={logo} alt="logo" /></a> 
+                  <a className="justify-center flex x:justify-start" href="/"><img src={logo} alt="logo" /></a>  
               </div>
             </div> 
             <div className="cell large-6">
               <nav>
-                <ul className="gap-x-12 flex justify-end font-semibold">
+                <ul className="gap-x-12 flex justify-end font-semibold hidden x:flex">
                   <li className='text-whiteColor-50'><NavLink to="/features">Features</NavLink></li>
                   <li className='text-whiteColor-50'><NavLink to="/pricing">Pricing</NavLink></li>
                   <li className='text-whiteColor-50'><NavLink to="/how-to-use">How To Use</NavLink></li>
@@ -30,10 +30,10 @@ export const Footer = () => {
           </div>
           <div className="grid-x grid-padding-x size-full items-center py-5 relative">
             <div className="cell large-6">
-              <p className="text-oldLavender text-sm">© 2023 UI8</p>
+              <p className="text-oldLavender text-sm hidden x:flex">© 2023 UI8</p>
             </div> 
             <div className="cell large-6">
-            <ul className="gap-x-12 flex font-semibold justify-end">
+            <ul className="gap-x-12 flex font-semibold justify-center x:justify-end">
                 <li className='footer_icon'>
                   <a href="/">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

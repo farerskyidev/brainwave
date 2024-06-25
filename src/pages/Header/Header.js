@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/logo.svg";
-import plus from "../../images/plus.svg";
 
 
 export const Header = () => {
@@ -40,8 +39,7 @@ export const Header = () => {
                 </div>
               </div>
             </div>
-            <img className="absolute left-2.5 bt--5 z-10" src={plus} alt="plus" /> 
-            <img className="absolute right-2.5 bt--5 z-10" src={plus} alt="plus" />
+
           </div>
 
         </div>

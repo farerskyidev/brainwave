@@ -1,6 +1,4 @@
 import React from 'react';
-
-import plus from "../images/plus.svg";
 import eclipse from "../images/eclipse.svg";
 import gradient_abstract from "../images/gradient-abstract.svg"; 
 
@@ -10,7 +8,7 @@ import 'swiper/css';
 
 const SliderOneCard = () => {
   return (
-    <section className='bg-color relative overflow-hidden py-20 xl:pt-136 2xl:pt-40 slider-section-second border-b border-customBorder'>
+    <section className='bg-color relative overflow-hidden py-20 xl:pt-136 2xl:pt-40 slider-section-second'>
         <div className="grid-x grid-padding-x items-center relative w-1440">
             <div className="cell large-6"> 
                 <div className="max-w-2xl mx-auto mb-20 max-w-sm">
@@ -55,11 +53,9 @@ const SliderOneCard = () => {
                     
                 </Swiper>
             </div>
-          </div>
-          <img className="absolute left-2.5 bt--5 z-10" src={plus} alt="plus" /> 
-          <img className="absolute right-2.5 bt--5 z-10" src={plus} alt="plus" />
-      </section> 
-  );
+        </div>
+    </section> 
+    );
 }
 
 export default SliderOneCard;
