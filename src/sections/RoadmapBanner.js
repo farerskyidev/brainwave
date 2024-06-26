@@ -14,7 +14,7 @@ const RoadmapBanner = () => {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      return data.source_url; // Assuming source_url contains the image URL
+      return data.source_url;
     } catch (error) {
       console.error('Error fetching image data:', error);
       return null;
@@ -30,7 +30,6 @@ const RoadmapBanner = () => {
         }
         const data = await response.json();
 
-        // Fetch image URLs asynchronously
         const imagesPromises = data.acf.roadmap.map(async (item) => {
           if (item.image) {
             const imageUrl = await fetchImage(item.image);
@@ -39,7 +38,6 @@ const RoadmapBanner = () => {
           return item;
         });
 
-        // Wait for all promises to resolve
         const roadmapData = await Promise.all(imagesPromises);
 
         setPageData({ ...data, acf: { ...data.acf, roadmap: roadmapData } });

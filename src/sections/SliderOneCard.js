@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import eclipse from "../images/eclipse.svg";
 import gradient_abstract from "../images/gradient-abstract.svg"; 
 
@@ -7,7 +7,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 const SliderOneCard = () => {
-  return (
+
+
+    return (
     <section className='bg-color relative overflow-hidden py-20 xl:pt-136 2xl:pt-40 slider-section-second'>
         <div className="grid-x grid-padding-x items-center relative w-1440">
             <div className="cell large-6"> 
