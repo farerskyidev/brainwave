@@ -6,18 +6,17 @@ import bracket_2 from "../images/bracket_2.png";
 const RoadmapSection = () => {
   const [pageData, setPageData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [images, setImages] = useState({});
 
   const fetchImage = async (imageId) => {
     try {
       const response = await fetch(`http://brainwave.local/wp-json/wp/v2/media/${imageId}`);
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Мережева відповідь не була успішною');
       }
       const data = await response.json();
-      return data.source_url; // Assuming source_url contains the image URL
+      return data.source_url; // Припускається, що source_url містить URL зображення
     } catch (error) {
-      console.error('Error fetching image data:', error);
+      console.error('Помилка під час завантаження зображення:', error);
       return null;
     }
   };
@@ -80,10 +79,10 @@ const RoadmapSection = () => {
               </div>
               <div className="cell large-8 small-12 pt-10 pb-10 border-b border-l border-customBorder">
                 <figure className='mt-8 flex items-start gap-x-4'>
-                <div>
-                  {item.image && (
-                      <img src={`http://brainwave.local/wp-json/wp/v2/media/${item.image}`} alt="Feature" />
-                    )}
+                  <div>
+                    {/* {item.imageUrl && <img src={item.imageUrl} alt="Roadmap Image" />} */}
+
+                    {item.imageUrl && <img src={item.imageUrl} alt={item.image.alt} />}
                   </div>
                   <div className='w-fit'>
                     <h5>{item.title}</h5>

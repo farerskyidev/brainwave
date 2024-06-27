@@ -3,6 +3,7 @@ import axios from 'axios'; // Import axios
 import icon_01 from "../images/01.png";
 import chevron_right from "../images/chevron-right.svg";
 import hover_image from "../images/hover_image.png";
+import { Link } from 'react-router-dom';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -93,9 +94,9 @@ const SliderCards = () => {
                       <div className='flex items-end w-full'>
                         <div className='w-full flex items-center justify-between'>
                           <img className="" src={icon_01} alt="icon_01" />
-                          <a className="flex items-center gap-5 text-xs" href='/'>explore more
-                            <img src={chevron_right} alt="chevron_right"/>
-                          </a>
+                          <Link to={`/post/${post.id}`} className="explore-button flex items-center gap-5 text-xs">
+                            Explore More <img src={chevron_right} alt="chevron_right" />
+                          </Link>
                         </div>
                       </div>
                     </div>
