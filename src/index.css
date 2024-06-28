@@ -338,3 +338,7 @@ svg {
   display: flex;
   align-items: center;
 }
+.tabs {
+  border: none;
+  background-color: transparent;
+}
