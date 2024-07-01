@@ -342,3 +342,7 @@ svg {
   border: none;
   background-color: transparent;
 }
+
+.unlock-card:hover p:last-child {
+  visibility: visible;
+}

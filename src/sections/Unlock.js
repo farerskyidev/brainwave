@@ -1,9 +1,69 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import img from "../images/IMG.png";
 import bracket_1 from "../images/bracket_1.png";
 import bracket_2 from "../images/bracket_2.png"; 
+import axios from 'axios';
 
 const Unlock = () => {
+
+  const [pageData, setPageData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const fetchImage = async (imageId) => {
+    try {
+      const response = await fetch(`http://brainwave.local/wp-json/wp/v2/media/${imageId}`);
+      if (!response.ok) {
+        throw new Error('Мережева відповідь не була успішною');
+      }
+      const data = await response.json();
+      return data.source_url; // Припускається, що source_url містить URL зображення
+    } catch (error) {
+      console.error('Помилка під час завантаження зображення:', error);
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    const fetchPageData = async () => {
+      try {
+        const response = await fetch('http://brainwave.local/wp-json/wp/v2/pages/176');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+
+        // Fetch image URLs asynchronously
+        const imagesPromises = data.acf.unlock.map(async (item) => {
+          if (item.image) {
+            const imageUrl = await fetchImage(item.image);
+            return { ...item, imageUrl };
+          }
+          return item;
+        });
+
+        // Wait for all promises to resolve
+        const roadmapData = await Promise.all(imagesPromises);
+
+        setPageData({ ...data, acf: { ...data.acf, unlock: roadmapData } });
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching page data:', error);
+        setLoading(false);
+      }
+    };
+    
+    fetchPageData();
+  }, []);
+    
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+    
+  if (!pageData) {
+    return <p>Error: Data could not be loaded</p>;
+  }
+
+
   return (
     <section className='bg-color pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden'>
         <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
@@ -32,43 +92,18 @@ const Unlock = () => {
           </div>
         </div>
         <div className='mt-20'>
-        <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
-            <div className="cell large-3 medium-6 small-12">
-              <article className='relative unlock-card pt-10'>
-                <div className='max-w-64	'>
-                  <p className='text-xs text-oldLavender mb-1'>01.</p>
-                  <h5 className='h-16'>Sign up</h5>
-                  <p className='text-purpleColor2 mt-2.5'>Create an account with Brainwave - AI chat app by providing your name, email</p>
-                </div>
-              </article>
-            </div>
-            <div className="cell large-3 medium-6 small-12">
-              <article className='relative unlock-card pt-10'>
-                <div className='max-w-64	'>
-                  <p className='text-xs text-oldLavender mb-1'>02.</p>
-                  <h5 className='h-16'>Connect with AI Chatbot</h5>
-                  <p className='text-purpleColor2 mt-2.5'>Create an account with Brainwave - AI chat app by providing your name, email</p>
-                </div>
-              </article>
-            </div>
-            <div className="cell large-3 medium-6 small-12">
-              <article className='relative unlock-card pt-10'>
-                <div className='max-w-64	'>
-                  <p className='text-xs text-oldLavender mb-1'>03.</p>
-                  <h5 className='h-16'>Get Personalized Recommendations</h5>
-                  <p className='text-purpleColor2 mt-2.5'>Create an account with Brainwave - AI chat app by providing your name, email</p>
-                </div>
-              </article>
-            </div>
-            <div className="cell large-3 medium-6 small-12">
-              <article className='relative unlock-card pt-10'>
-                <div className='max-w-64	'>
-                  <p className='text-xs text-oldLavender mb-1'>04.</p>
-                  <h5 className='h-16'>Explore and Engage</h5>
-                  <p className='text-purpleColor2 mt-2.5'>Create an account with Brainwave - AI chat app by providing your name, email</p>
-                </div>
-              </article>
-            </div>
+          <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
+            {pageData.acf.unlock.map((item, index) =>
+              <div key={index} className="cell large-3 medium-6 small-12">
+                <article className='relative unlock-card pt-10'>
+                  <div className='max-w-64'>
+                    <p className='text-xs text-oldLavender mb-1'>{item.number}</p>
+                    <h5 className='h-16'>{item.title}</h5>
+                    <p className='text-purpleColor2 mt-2.5 invisible'>{item.text}</p>
+                  </div>
+                </article>
+              </div>
+            )}
           </div>
         </div>
           
