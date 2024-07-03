@@ -52,25 +52,24 @@ h5 {
 h6 {
   font-size: 1.25rem;
 }
-li {
-  list-style-type: circle;
+
+.colaboration_list li p:first-child:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url('/src/images/Check_icon.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 a, button {
   font-family: 'SourceCodePro-SemiBold', sans-serif;
   text-transform: uppercase;
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-li::marker {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url('./images/03.png');
-  background-size: cover;
-  margin-right: 10px;
-  background-size: contain;
 }
 
 header {
@@ -89,6 +88,30 @@ header {
 .accordion__button {
   background-color: transparent;
   color: white;
+  position: relative;
+}
+
+.accordion__button:before {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 7px);
+  content: '';
+  transform: translateY(-50%);
+  width: 16px;
+  height: 2px;
+  background-image: url('/src/images/minus.svg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 0;
+  top: calc(50% - 0px);
+  border: none;
+}
+
+.accordion__button[aria-expanded='true']::before, .accordion__button[aria-selected='true']::before {
+  transform: translateY(-50%);
+  height: 16px;
+  background-image: url('/src/images/plus_01.svg'); 
+  right: 0;
 }
 
 .accordion__button:hover {

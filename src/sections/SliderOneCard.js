@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React  from 'react';
 import eclipse from "../images/eclipse.svg";
 import gradient_abstract from "../images/gradient-abstract.svg"; 
 
@@ -6,7 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 
-const SliderOneCard = () => {
+const SliderOneCard = ({ data }) => {
+    if (!data) return null;
 
 
     return (
@@ -14,8 +15,8 @@ const SliderOneCard = () => {
         <div className="grid-x grid-padding-x items-center relative w-1440">
             <div className="cell large-6"> 
                 <div className="max-w-2xl mx-auto mb-20 max-w-sm">
-                    <h2 className='text-5xl leading-[3.75rem] mb-6'>Unlock the power of AI</h2>
-                    <p className='text-x text-purpleColor2 mb-10'>Brainwave unlocks the potential of AI-powered applications</p>
+                    <h2 className='text-5xl leading-[3.75rem] mb-6'>{data.acf.slider_one_card_title}</h2>
+                    <p className='text-x text-purpleColor2 mb-10'>{data.acf.slider_one_card_text}</p>
                     <div className=" rounded-xl w-fit">
                         <div className="border-gradient-cut rounded-xl w-fit">
                             <div className="border-gradient-content-cut">
