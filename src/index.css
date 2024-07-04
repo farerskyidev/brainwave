@@ -77,6 +77,31 @@ header {
   position: absolute;
 }
 
+header ul li a[aria-current="page"] {
+  color: #FFFFFF;
+  position: relative;
+}
+
+header ul li a[aria-current="page"]:before {
+  content: '';
+  background-color: #D9D9D9;
+  width: 1px;
+  height: 16px;
+  position: absolute;
+  bottom: -40px;
+  left: -48px;
+}
+
+header ul li a[aria-current="page"]:after {
+  content: '';
+  background-color: #D9D9D9;
+  width: 1px;
+  height: 16px;
+  position: absolute;
+  bottom: -40px;
+  right: -48px;
+}
+
 .feature-text p {
   color: #ADA8C3;
 }

@@ -28,6 +28,8 @@ module.exports = {
         'oldLavender': '#757185',
         'lavenderGrey': '#CAC6DD',   
         'customBorder': '#252134',
+        'gray85': '#D9D9D9',
+        
       },
       lineHeight: {
 
