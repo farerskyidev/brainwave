@@ -61,11 +61,11 @@ const SliderCards = () => {
   }, []);
     
   if (loading) {
-    return <p>Loading...</p>;
+    return <p></p>;
   }
     
   if (!pageData) {
-    return <p>Error: Data could not be loaded</p>;
+    return <p></p>;
   }
 
   return (
@@ -109,7 +109,43 @@ const SliderCards = () => {
             ))}
           </Swiper>
         </div>
+        <svg className='bg_slider' width="242" height="242" viewBox="0 0 242 242" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0_707_5210" maskUnits="userSpaceOnUse" x="0" y="0" width="242" height="242">
+            <path d="M242 0H0V242H242V0Z" fill="white"/>
+          </mask>
+          <g mask="url(#mask0_707_5210)">
+            <g filter="url(#filter0_f_707_5210)">
+              <path d="M241.244 121H56.2656V294.333H241.244V121Z" fill="#907CFF"/>
+            </g>
+          </g>
+          <defs>
+            <filter id="filter0_f_707_5210" x="-193.734" y="-129" width="684.979" height="673.332" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_707_5210"/>
+            </filter>
+          </defs>
+        </svg>
+        <svg className='bg_slider_2' width="242" height="242" viewBox="0 0 242 242" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0_707_5210" maskUnits="userSpaceOnUse" x="0" y="0" width="242" height="242">
+            <path d="M242 0H0V242H242V0Z" fill="white"/>
+          </mask>
+          <g mask="url(#mask0_707_5210)">
+            <g filter="url(#filter0_f_707_5210)">
+              <path d="M241.244 121H56.2656V294.333H241.244V121Z" fill="#907CFF"/>
+            </g>
+          </g>
+          <defs>
+            <filter id="filter0_f_707_5210" x="-193.734" y="-129" width="684.979" height="673.332" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_707_5210"/>
+            </filter>
+          </defs>
+        </svg>
       </div>
+      
+
     </section>
   );
 }

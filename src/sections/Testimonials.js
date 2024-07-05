@@ -70,7 +70,7 @@ const Testimonials = () => {
       </div> 
       
       {loading ? (
-        <p>Loading...</p>
+        <p></p>
       ) : (
         <div className="grid-x grid-padding-x items-center py-5 relative w-1440 gap-y-8"> 
           {testimonials.map(testimonial => (
@@ -103,6 +103,8 @@ const Testimonials = () => {
           ))}
         </div>
       )}
+
+
     </section>
   );
 }

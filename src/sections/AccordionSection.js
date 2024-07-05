@@ -32,11 +32,11 @@ const AccordionSection = () => {
     }, []);
 
     if (loading) {
-    return <p>Loading...</p>;
+    return <p></p>;
     }
 
     if (!pageData) {
-    return <p>Error: Data could not be loaded</p>;
+    return <p></p>;
     }
 
     return (

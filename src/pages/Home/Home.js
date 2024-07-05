@@ -6,9 +6,10 @@ import SliderOneCard from '../../sections/SliderOneCard';
 import Colaboration from '../../sections/Colaboration';
 import Unlock from '../../sections/Unlock';
 import Prefooter from '../../sections/Prefooter';
+import loadingImage from '../../images/gif.png'; 
 
 function Home() {
-  const [pageData, setPageData] = useState(null);
+  const [pageData, setPageData] = useState(null); 
   const [loading, setLoading] = useState(true);
 
   const fetchImage = async (imageId) => {
@@ -53,16 +54,20 @@ function Home() {
     } catch (error) {
       console.error('Error fetching page data:', error);
     } finally {
-      setLoading(false);
+      setLoading(false); 
     }
   }, []);
 
   useEffect(() => {
     fetchPageData();
-  }, [fetchPageData]);
+  }, [fetchPageData]); 
 
   if (loading) {
-    return <div>Loading...</div>; 
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#0E0C15' }}>
+        <img className='h-24 w-24' src={loadingImage} alt="Loading..." />
+      </div> 
+    );
   }
 
   return (

@@ -17,11 +17,11 @@ export const Header = () => {
             </div>
             <div className="cell large-6"> 
               <nav>
-                <ul className="gap-x-24 flex justify-center font-semibold">
-                  <li className='text-whiteColor-50' ><NavLink to="/features">Features</NavLink></li>
+                <ul className="flex justify-center font-semibold menu">
+                  <li className='text-whiteColor-50'><NavLink to="/features">Features</NavLink></li>
                   <li className='text-whiteColor-50'><NavLink to="/pricing">Pricing</NavLink></li>
                   <li className='text-whiteColor-50'><NavLink to="/how-to-use">How To Use</NavLink></li>
-                  <li className='text-whiteColor-50'><NavLink to="/roadmap">Roadmap</NavLink></li> 
+                  <li className='text-whiteColor-50'><NavLink to="/roadmap">Roadmap</NavLink></li>  
                 </ul>
               </nav>
             </div> 

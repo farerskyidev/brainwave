@@ -9,8 +9,6 @@ function HowToUse() {
  
   return ( 
     <main>  
-      
-      
       <Contacts />  
     </main>
   );
