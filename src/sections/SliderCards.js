@@ -4,7 +4,7 @@ import icon_01 from "../images/01.png";
 import chevron_right from "../images/chevron-right.svg";
 import hover_image from "../images/hover_image.png";
 import { Link } from 'react-router-dom';
-
+import plus from "../images/plus.svg";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
@@ -143,8 +143,7 @@ const SliderCards = () => {
             </filter>
           </defs>
         </svg>
-      </div>
-      
+      </div> 
 
     </section>
   );

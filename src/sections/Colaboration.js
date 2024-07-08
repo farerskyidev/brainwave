@@ -6,7 +6,7 @@ const Colaboration = ({ data }) => {
   if (!data) return null;
   return (
     <section className='bg-color pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden py-1.5'>
-        <div className="grid-x grid-padding-x items-center py-5 relative w-1440 border-t border-customBorder">
+        <div className="grid-x grid-padding-x items-center py-5 relative w-1440 border-customBorder">
           <div className="cell large-6">
             <div className="max-w-2xl mx-auto mb-20 max-w-sm">
               <h2 className='text-5xl leading-[3.75rem] mb-6'>{data.acf.colaboration_title}</h2>
@@ -30,8 +30,11 @@ const Colaboration = ({ data }) => {
             <p className='text-x text-purpleColor2 mb-8'>{data.acf.colaboration_text}</p>
             <img className="" src={img_122} alt="img_122" />      
           </div>
-          <img className="absolute left-2.5 top--5 z-10" src={plus} alt="plus" /> 
-          <img className="absolute right-2.5 top--5 z-10" src={plus} alt="plus" />
+          
+        </div>
+        <div className='bgHorLine h-px absolute top-5 left-0 w-full'>
+          <img className="absolute left-2.5 bt--5 z-10" src={plus} alt="plus" /> 
+          <img className="absolute right-2.5 bt--5 z-10" src={plus} alt="plus" />
         </div>
       </section>
   );

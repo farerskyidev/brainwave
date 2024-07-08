@@ -157,6 +157,58 @@ header {
   background: rgba(14, 12, 21, 1);
 }
 
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+  opacity: 1;
+}
+
+.slider-cards .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  position: absolute;
+  bottom: 0;
+  column-gap: 20px;
+  display: flex;
+  margin-bottom: -50px;
+}
+
+.swiper-pagination-bullet {
+  /* width: 10px !important;
+  height: 10px !important; */
+
+  padding: 14px;
+}
+.swiper-pagination-bullet {
+  position: relative;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+
+  background-image: url('/src/images/circle.svg'); 
+  position: absolute;
+  top: calc(50% - 7px);
+  content: '';
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  right: calc(50% - 12px);
+  top: calc(50% - 0px);
+
+}
+
+.swiper-pagination-bullet:after {
+
+  background-image: url('/src/images/white_dot.png'); 
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-repeat: no-repeat;
+  right: calc(50% - 3px);
+  top: calc(50% - 3px); 
+
+}
 
 .testimonials_bottom {
   background-color: #15131D;
@@ -195,6 +247,10 @@ header {
 
 .top--5 {
   top: -5px;
+}
+
+.top-5 {
+  top: 5px;
 }
 
 .w-1920 {

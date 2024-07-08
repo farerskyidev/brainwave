@@ -19,6 +19,7 @@ module.exports = {
         
         'bgColor': '#0E0C15',
         'whiteColor': '#ffffff',
+        'whiteColor-90': 'rgba( 255 , 255 , 255 , 0.9 )', 
         'whiteColor-50': 'rgba( 255 , 255 , 255 , 0.502 )', 
         'whiteColor-15': 'rgba( 255 , 255 , 255 , 0.15 )',
         'blackColor': '#000000',
