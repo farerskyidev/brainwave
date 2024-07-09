@@ -245,8 +245,16 @@ header {
   right: -5px;
 }
 
+.right-15 {
+  right: 15px;
+}
+
 .top--5 {
   top: -5px;
+}
+
+.top-20 {
+  top: 20px;
 }
 
 .top-5 {

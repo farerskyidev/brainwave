@@ -8,15 +8,18 @@ function SinglePostMain() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get(`https://brainwave.local/wp-json/wp/v2/posts/${postId}`)
-            .then(response => {
+        const fetchPost = async () => {
+            try {
+                const response = await axios.get(`https://brainwave.local/wp-json/wp/v2/posts/${postId}`);
                 setPost(response.data);
                 setLoading(false);
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error('Error fetching single post:', error);
                 setLoading(false);
-            });
+            }
+        };
+
+        fetchPost();
     }, [postId]);
 
     if (loading) {

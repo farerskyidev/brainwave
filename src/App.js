@@ -31,7 +31,7 @@ function App() {
     <div className='app-wrapper'>
       <BrowserRouter>
         <div className="App">
-          <Header />
+          <Header /> 
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/features' element={<Features />} />
