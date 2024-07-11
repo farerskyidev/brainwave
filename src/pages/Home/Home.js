@@ -35,7 +35,6 @@ function Home() {
       const data = await response.json();
 
       if (data.acf && data.acf.home) {
-        // Fetch image URLs asynchronously
         const imagesPromises = data.acf.home.map(async (item) => {
           if (item.image) {
             const imageUrl = await fetchImage(item.image);

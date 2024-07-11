@@ -1,45 +1,46 @@
-import React, { useState, useEffect } from 'react';
+// PostDetail.js
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-function SinglePostMain() {
-    const { postId } = useParams();
-    const [post, setPost] = useState(null);
-    const [loading, setLoading] = useState(true);
+const SinglePostMain = () => {
+const { postId } = useParams();
+const [post, setPost] = useState(null);
+const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const fetchPost = async () => {
-            try {
-                const response = await axios.get(`https://brainwave.local/wp-json/wp/v2/posts/${postId}`);
-                setPost(response.data);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching single post:', error);
-                setLoading(false);
-            }
-        };
-
-        fetchPost();
-    }, [postId]);
-
-    if (loading) {
-        return <div>Loading...</div>;
+useEffect(() => {
+const fetchPost = async () => {
+    try {
+    const response = await axios.get(`http://brainwave.local/wp-json/wp/v2/posts/${postId}`);
+    setPost(response.data);
+    setLoading(false);
+    } catch (error) {
+    console.error('Error fetching post:', error);
+    setLoading(false);
     }
+};
 
-    if (!post) {
-        return <div>No post found.</div>;
-    }
+fetchPost();
+}, [postId]);
 
-    return (
-        <section className='bg-color pt-28 relative overflow-hidden pb-72'>
-            <div className="grid-x grid-padding-x items-center relative w-1440 gap-y-8"> 
-                <div className="cell large-12">
-                    <h2 className='mb-10'>{post.title.rendered}</h2>
-                    <div dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
-                </div>
-            </div> 
-        </section>
-    );
+if (loading) {
+return <p>Loading...</p>;
 }
+
+if (!post) {
+return <p>No post found.</p>;
+}
+
+return (
+    <div className='bg-color p-28 relative'>
+        <div className="grid-x grid-padding-x size-full items-center py-5 relative">
+            <div className="cell large-12">
+                <h1>{post.title.rendered}</h1>
+                <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+            </div>
+        </div>
+    </div>
+);
+};
 
 export default SinglePostMain;

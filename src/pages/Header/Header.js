@@ -23,39 +23,40 @@ const Header = () => {
             </div>
           </div>
           <div className="cell large-9 mt-10 m:mt-0">
-            <nav>
+            <nav className="items-center" >
               <ul className={`block m:flex justify-end font-semibold menu items-center ${isMenuOpen ? 'block' : 'hidden'}`}>
-                <li className="text-whiteColor-50">
+                <li className="text-whiteColor-50 px-0 m:px-2 x:px-6 xl:px-8 2xl:px-12">
                   <NavLink to="/features">Features</NavLink>
                 </li>
-                <li className="text-whiteColor-50">
+                <li className="text-whiteColor-50 px-0 m:px-2 x:px-6 xl:px-8 2xl:px-12">
                   <NavLink to="/pricing">Pricing</NavLink>
                 </li>
-                <li className="text-whiteColor-50">
+                <li className="text-whiteColor-50 px-0 m:px-2 x:px-6 xl:px-8 2xl:px-12">
                   <NavLink to="/how-to-use">How To Use</NavLink>
                 </li>
-                <li className="text-whiteColor-50">
+                <li className="text-whiteColor-50 px-0 m:px-2 x:px-6 xl:px-8 2xl:px-12">
                   <NavLink to="/roadmap">Roadmap</NavLink>
                 </li>
-                <li className="text-whiteColor-50">
-                  {" "}
-                  <NavLink className="text-xs font-semibold text-whiteColor-50" to="/new-account">
-                    New Account
-                  </NavLink>{" "}
-                </li>
-                <li className="text-whiteColor-50 justify-start grid">
-                  <div className="rounded-xl w-fit margin-a">
-                    <div className="border-gradient-cut rounded-xl w-fit margin-a">
-                      <div className="border-gradient-content-cut">
-                        <button
-                          className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white"
-                        >
-                        sign in
-                        </button>
+                
+                  <li className="text-whiteColor-50 px-0 m:px-2 x:px-6 xl:px-8 2xl:px-12">
+                    {" "}
+                    <NavLink className="text-xs font-semibold text-whiteColor-50" to="/new-account">
+                      New Account
+                    </NavLink>{" "}
+                  </li>
+                  <li className="text-whiteColor-50 justify-start grid">
+                    <div className="rounded-xl w-fit margin-a">
+                      <div className="border-gradient-cut rounded-xl w-fit margin-a">
+                        <div className="border-gradient-content-cut">
+                          <button
+                            className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white"
+                          >
+                          sign in
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
+                  </li>              
               </ul>
             </nav>
           </div>

@@ -9,7 +9,12 @@ import HowToUse from './pages/HowToUse/HowToUse';
 import Roadmap from './pages/Roadmap/Roadmap';
 import Home from './pages/Home/Home';
 import NewAccount from './pages/NewAccount/NewAccount';
-import SinglePost from './pages/SinglePost/SinglePost'; 
+import SinglePost from './pages/SinglePost/SinglePost';
+import ContactForm from './sections/ContactForm'; 
+
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -31,7 +36,7 @@ function App() {
     <div className='app-wrapper'>
       <BrowserRouter>
         <div className="App">
-          <Header /> 
+          <Header />
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/features' element={<Features />} />
@@ -39,7 +44,8 @@ function App() {
             <Route exact path='/how-to-use' element={<HowToUse />} />
             <Route exact path='/roadmap' element={<Roadmap />} />
             <Route exact path='/new-account' element={<NewAccount />} />
-            <Route path="/post/:postId" element={<SinglePost />} /> 
+            <Route path="/post/:postId" element={<SinglePost />} />
+            <Route path="/contact" element={<ContactForm />} />
           </Routes>
           <Footer />
         </div>

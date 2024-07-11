@@ -20,10 +20,10 @@ export const Footer = () => {
             <div className="cell large-6">
               <nav>
                 <ul className="flex justify-end font-semibold hidden x:flex menu">
-                  <li className='text-whiteColor-50'><NavLink to="/features">Features</NavLink></li>
-                  <li className='text-whiteColor-50'><NavLink to="/pricing">Pricing</NavLink></li>
-                  <li className='text-whiteColor-50'><NavLink to="/how-to-use">How To Use</NavLink></li>
-                  <li className='text-whiteColor-50'><NavLink to="/roadmap">Roadmap</NavLink></li> 
+                  <li className='text-whiteColor-50 m:px-2 x:px-6 xl:px-8 2xl:px-12'><NavLink to="/features">Features</NavLink></li>
+                  <li className='text-whiteColor-50 m:px-2 x:px-6 xl:px-8 2xl:px-12'><NavLink to="/pricing">Pricing</NavLink></li>
+                  <li className='text-whiteColor-50 m:px-2 x:px-6 xl:px-8 2xl:px-12'><NavLink to="/how-to-use">How To Use</NavLink></li>
+                  <li className='text-whiteColor-50 m:px-2 x:px-6 xl:px-8 2xl:px-12'><NavLink to="/roadmap">Roadmap</NavLink></li> 
                 </ul>
               </nav>
             </div> 
