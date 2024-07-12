@@ -73,7 +73,7 @@ const SliderCards = () => {
       <div className="max-w-2xl mx-auto">
         <h2 className='text-5xl text-left m:text-center leading-[3.75rem]'>{pageData.acf.slider_cards_title}</h2>
       </div>
-      <div className="grid-x grid-padding-x items-center relative w-1440 slider-section py-10 m:py-20">
+      <div className="grid-x grid-padding-x items-center relative w-1440 slider-section py-10 m:py-20 z-20"> 
         <div className='pl-20'>
           <Swiper
             spaceBetween={50}

@@ -38,20 +38,16 @@ const Header = () => {
                   <NavLink to="/roadmap">Roadmap</NavLink>
                 </li>
                 
-                  <li className="text-whiteColor-50 px-0 m:px-2 x:px-6 xl:px-8 2xl:px-12">
-                    {" "}
-                    <NavLink className="text-xs font-semibold text-whiteColor-50" to="/new-account">
-                      New Account
-                    </NavLink>{" "}
-                  </li>
+                
                   <li className="text-whiteColor-50 justify-start grid">
                     <div className="rounded-xl w-fit margin-a">
                       <div className="border-gradient-cut rounded-xl w-fit margin-a">
                         <div className="border-gradient-content-cut">
                           <button
-                            className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white"
+                            className="text-white px-6 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white hover:opacity-[.80]"
                           >
-                          sign in
+                          <a href="/">get started</a>
+
                           </button>
                         </div>
                       </div>

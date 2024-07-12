@@ -67,7 +67,7 @@ h6 {
   height: 24px;
   width: 24px;
 }
-a, button {
+a, button, label {
   font-family: 'SourceCodePro-SemiBold', sans-serif;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -115,11 +115,14 @@ header {
   left: calc(50% - 400px) !important;
   top: calc(50% - 300px) !important;
   background-color: #0E0C15 !important;
-  padding-top: 50px !important; 
+  padding: 50px 20px !important;
+  border-color: rgba(255, 255, 255, 0.502) !important ;
 }
 
 .ReactModal__Content input,textarea {
   background-color: #0E0C15 !important;
+  border-color: rgba( 255 , 255 , 255 , 0.502 );
+  color: white;
 }
 
 .ReactModal__Content textarea {
@@ -135,13 +138,17 @@ header {
 }
 
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
-  background-color: rgba(255, 255, 255, 0.3)!important; 
+  background-color: var(--dark-color, rgba(0, 0, 0, 0.9)) !important;
 }
 
 .close_form {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+.close_form svg {
+  height: 30px;
 }
 
 .submit_button_form {
@@ -470,9 +477,9 @@ header {
   height: auto;
   width: -moz-fit-content;
   width: fit-content;
-  top: calc(50% - 121px);
-  left: calc(24% - 121px);
-  z-index: 10;
+  top: calc(37% - 121px);
+  left: calc(7% - 121px);
+
 }
 
 .bg_slider_2 {
@@ -484,7 +491,7 @@ header {
   width: fit-content;
   top: calc(50% - 121px);
   right: calc(0% - 121px);
-  z-index: 10;
+
 }
 
 .bg_testimonials {
@@ -614,4 +621,10 @@ svg {
   border: none;
   font-size: 16px; 
   cursor: pointer;
+}
+
+
+
+a:focus, a:hover {
+  color: currentColor;
 }

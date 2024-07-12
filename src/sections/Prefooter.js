@@ -31,8 +31,8 @@ const Prefooter = () => {
             <p className='text-xl text-oldLavender mb-8'>Unleash the power of AI within Brainwave. Upgrade your productivity with Brainwave, the open AI chat app.</p>
             <div className="rounded-xl w-fit margin-a">
               <div className="border-gradient-cut-none-border rounded-xl w-fit margin-a">
-                <button className="text-bgColor px-7 py-4 font-extrabold rounded-xl relative z-10 bg-whiteColor" onClick={openPopup}>
-                  get started 
+                <button className="text-bgColor px-7 py-4 font-extrabold rounded-xl relative z-10 bg-whiteColor hover:opacity-[.80]" onClick={openPopup}> 
+                  <a href="/">get started</a>
                 </button>
               </div>
             </div>

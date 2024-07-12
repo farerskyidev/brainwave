@@ -28,7 +28,7 @@ function Home() {
 
   const fetchPageData = useCallback(async () => {
     try {
-      const response = await fetch('http://brainwave.local/wp-json/wp/v2/pages/176');
+      const response = await fetch('http://brainwave.local/wp-json/wp/v2/pages/176?acf_format=standard');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

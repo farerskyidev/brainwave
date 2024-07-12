@@ -6,7 +6,7 @@ import bracket_2 from "../images/bracket_2.png";
 const Unlock = ({ data }) => {
   if (!data) return null;
   return (
-    <section className='bg-color pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden'>
+    <section className='bg-color pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden'> 
         <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
           <div className="cell large-6">
             <img className="" src={img} alt="img" />   
@@ -23,9 +23,9 @@ const Unlock = ({ data }) => {
               <div className=" rounded-xl w-fit">
                   <div className="border-gradient-cut rounded-xl w-fit">
                       <div className="border-gradient-content-cut">
-                          <button className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white">
+                          <button className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white hover:opacity-[.80]">
                           
-                          <a href="http://localhost:3000/">connect now</a>
+                          <a href="/">connect now</a>
                           
                           </button>     
                       </div>

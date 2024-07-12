@@ -14,8 +14,9 @@ const RoadmapBanner = ({ data }) => {
             <div className="rounded-xl w-fit margin-a">
               <div className="border-gradient-cut-none-border rounded-xl w-fit margin-a">
                 
-                  <button className="text-bgColor px-7 py-4 font-extrabold rounded-xl relative z-10 bg-whiteColor">
-                  suggest features
+                  <button className="text-bgColor px-7 py-4 font-extrabold rounded-xl relative z-10 bg-whiteColor hover:opacity-[.80]">
+                  
+                  <a href="/">suggest features</a>
                   </button>
                 
               </div>

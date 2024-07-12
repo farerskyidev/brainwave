@@ -44,6 +44,9 @@ module.exports = {
         '6': '6px',
         '8': '8px',
       },
+      opacity: {
+        '80': '.80',
+      },
       spacing: {
         '60': '60px', 
         '62': '62px',

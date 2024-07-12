@@ -8,7 +8,6 @@ import Pricing from './pages/Pricing/Pricing';
 import HowToUse from './pages/HowToUse/HowToUse';
 import Roadmap from './pages/Roadmap/Roadmap';
 import Home from './pages/Home/Home';
-import NewAccount from './pages/NewAccount/NewAccount';
 import SinglePost from './pages/SinglePost/SinglePost';
 import ContactForm from './sections/ContactForm'; 
 
@@ -43,7 +42,6 @@ function App() {
             <Route exact path='/pricing' element={<Pricing />} />
             <Route exact path='/how-to-use' element={<HowToUse />} />
             <Route exact path='/roadmap' element={<Roadmap />} />
-            <Route exact path='/new-account' element={<NewAccount />} />
             <Route path="/post/:postId" element={<SinglePost />} />
             <Route path="/contact" element={<ContactForm />} />
           </Routes>

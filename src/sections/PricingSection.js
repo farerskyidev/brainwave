@@ -5,15 +5,14 @@ const PricingSection = () => {
   const [pageData, setPageData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-
   useEffect(() => {
-    const fetchPageData = async () => {
+    const fetchPageData = async () => { 
       try {
         const response = await axios.get('http://brainwave.local/wp-json/wp/v2/pages/57');
         setPageData(response.data);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching page data:', error);
+        console.error('Помилка при отриманні даних сторінки:', error);
         setLoading(false);
       }
     };
@@ -22,24 +21,22 @@ const PricingSection = () => {
   }, []);
 
   if (loading) {
-    return <p></p>;
+    return <p>Завантаження...</p>;
   }
 
   if (!pageData) {
-    return <p></p>;
+    return <p>Помилка завантаження даних.</p>;
   }
+
+  const { acf } = pageData;
+  const { pricing_title_banner, pricing_text_banner, pricing_image_banner } = acf;
 
   return (
     <section className='bg-color pt-14 m:pt-20 x:pt-28 relative'>    
       <div className="text-center banner-wrapp">
         <div className="max-w-4xl mx-auto">
-          <h1 className='text-6xl leading-[4.5rem]'>{pageData.acf.pricing_title_banner}</h1>
-          <p className='text-xl leading-8 mb-7 max-w-3xl mx-auto text-whiteColor-50'>{pageData.acf.pricing_text_banner}</p>  
-          <div className="relative mt-62 m:mt-20 x:mt-28 2xl:mt-100">
-            <div className="rounded-xl border-gradient border-gradient-content">
-
-            </div>
-          </div>
+          <h1 className='text-6xl leading-[4.5rem]'>{pricing_title_banner}</h1>
+          <p className='text-xl leading-8 pb-7 max-w-3xl mx-auto text-whiteColor-50'>{pricing_text_banner}</p>  
         </div>
       </div>
     </section>

@@ -18,8 +18,9 @@ const Colaboration = ({ data }) => {
               <div className=" rounded-xl w-fit">
                   <div className="border-gradient-cut rounded-xl w-fit">
                       <div className="border-gradient-content-cut">
-                          <button className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white">
-                          try it now
+                          <button className="text-white px-7 py-4 font-bold rounded-xl relative z-10 bg-color border-2 border-white hover:opacity-[.80]">
+                          <a href="/">try it now</a>
+                          
                           </button>     
                       </div>
                   </div>

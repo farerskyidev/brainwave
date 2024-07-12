@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import { FaTimes } from "react-icons/fa";
 
 const ContactForm = ({ modalIsOpen, closeModal }) => {
 const [name, setName] = useState('');
@@ -14,14 +15,16 @@ setSubmitted(true);
 };
 
 return (
-<Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Contact Form">
-    <button className='close_form' onClick={closeModal}>Close</button>
+<Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Contact Form"> 
+    <button className='close_form' onClick={closeModal}>
+    <FaTimes />
+        </button>
     {submitted ? (
-    <div>Thank you for your message!</div>
+    <div className='text-4xl justify-center flex h-full items-center '>Thank you for your message!</div>
     ) : (
     <form onSubmit={handleSubmit}>
         <div>
-        <label htmlFor="name">Name:</label>
+        <label className='text-base mb-2' htmlFor="name">Name:</label>
         <input
             type="text"
             id="name"
@@ -31,7 +34,7 @@ return (
         />
         </div>
         <div>
-        <label htmlFor="email">Email:</label>
+        <label className='text-base mb-2' htmlFor="email">Email:</label>
         <input
             type="email"
             id="email"
@@ -41,15 +44,19 @@ return (
         />
         </div>
         <div>
-        <label htmlFor="message">Message:</label>
-        <textarea
+        <label className='text-base mb-2 resize-none' htmlFor="message">Message:</label>
+        <textarea className='p-2 resize-none'
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
         />
-        </div>
-        <button className='submit_button_form' type="submit">Submit</button>
+        </div> 
+        
+            
+        <button className='submit_button_form text-bgColor px-7 py-4 font-extrabold rounded-xl relative z-10 bg-whiteColor' type="submit">Submit</button>
+            
+        
     </form>
     )}
 </Modal>

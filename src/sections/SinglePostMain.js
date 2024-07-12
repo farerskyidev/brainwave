@@ -35,7 +35,7 @@ return (
     <div className='bg-color p-28 relative'>
         <div className="grid-x grid-padding-x size-full items-center py-5 relative">
             <div className="cell large-12">
-                <h1>{post.title.rendered}</h1>
+                <h1 className='mb-8'>{post.title.rendered}</h1>
                 <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
             </div>
         </div>
