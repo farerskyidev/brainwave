@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import banner_img from "../images/photo_1.png";
+import React from 'react';
 import plus from "../images/plus.svg";
 import logo_1 from "../images/logo_1.png";
 import logo_2 from "../images/logo_2.png";
@@ -8,34 +6,12 @@ import logo_3 from "../images/logo_3.png";
 import logo_4 from "../images/logo_4.png";
 import line from "./../images/line.svg"; 
 
-const BannerSection = () => {
-  const [pageData, setPageData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPageData = async () => {
-      try {
-        const response = await axios.get('http://brainwave.local/wp-json/wp/v2/pages/176?acf_format=standard');
-        setPageData(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching page data:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchPageData();
-  }, []);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (!pageData) {
+const BannerSection = ({ data }) => {
+  if (!data) {
     return <p>Error loading data.</p>;
   }
 
-  const { acf } = pageData;
+  const { acf } = data;
   const { banner_home_image, banner_home_text, banner_home_title, banner_home_title_span } = acf;
 
   const imageUrl = typeof banner_home_image === 'string' ? banner_home_image : null;
@@ -73,8 +49,8 @@ const BannerSection = () => {
         <img className="absolute right-2.5 bt--5 z-10" src={plus} alt="plus" />
       </div> 
       <div className='text-center h-0 xl:h-auto'>
-        {pageData && pageData.acf && pageData.acf.banner_home_text_second && (
-          <p className='text-whiteColor-50 mb-16 text-xs uppercase'>{pageData.acf.banner_home_text_second}</p>
+        {data.acf && data.acf.banner_home_text_second && (
+          <p className='text-whiteColor-50 mb-16 text-xs uppercase'>{data.acf.banner_home_text_second}</p>
         )}
         <div className='flex justify-center xl:gap-x-24 gap-x-16'>
           <img className="" src={logo_1} alt="Logo 1" />

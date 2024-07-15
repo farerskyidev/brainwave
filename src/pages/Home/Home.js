@@ -59,26 +59,31 @@ function Home() {
 
   useEffect(() => {
     fetchPageData();
-  }, [fetchPageData]); 
-
-  if (loading) {
+  }, [fetchPageData]);
+  
+    if (loading) {
+      return (
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#0E0C15' }}>
+          <img className='h-24 w-24' src={loadingImage} alt="Loading..." />
+        </div> 
+      );
+    }
+  
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#0E0C15' }}>
-        <img className='h-24 w-24' src={loadingImage} alt="Loading..." />
-      </div> 
+      <main>
+        {pageData && (
+          <>
+            <BannerSection data={pageData} />
+            <SliderCards data={pageData} />
+            <SliderOneCard data={pageData} />
+            <Colaboration data={pageData} />
+            <Unlock data={pageData} />
+          </>
+        )}
+        <Prefooter />
+      </main>
     );
   }
-
-  return (
-    <main>
-      {pageData && <BannerSection data={pageData} />}
-      {pageData && <SliderCards data={pageData} />}
-      {pageData && <SliderOneCard data={pageData} />}
-      {pageData && <Colaboration data={pageData} />}
-      {pageData && <Unlock data={pageData} />}
-      <Prefooter />
-    </main>
-  );
-}
-
-export default Home;
+  
+  export default Home;
+  

@@ -7,8 +7,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 const SliderOneCard = ({ data }) => {
-    if (!data) return null;
-
+    if (!data) {
+        return <p>Error loading data.</p>;  
+    }
 
     return (
     <section className='bg-color relative overflow-hidden py-20 xl:pt-136 2xl:pt-40 slider-section-second'>
