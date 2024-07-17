@@ -31,14 +31,14 @@ const BannerSection = ({ data }) => {
           <div className="border-gradient-cut-none-border rounded-xl w-fit margin-a">
             <button className="text-bgColor px-7 py-4 font-extrabold rounded-xl relative z-10 bg-whiteColor custom-hover-delay hover:bg-whiteColor-90">
               Sign In
-            </button>
+            </button> 
           </div>
           <div className="border-gradient rounded-xl mt-62 m:mt-20 x:mt-28 2xl:mt-100 mb-11 m:mb-100 x:mb-84 xl:mb-20">
             <div className="border-gradient-content">
               {imageUrl ? (
                 <img className='rounded-xl' src={imageUrl} alt="Banner Image" />
               ) : (
-                <p>Image not available</p>
+                <p>Image not available</p> 
               )}
             </div>
           </div>

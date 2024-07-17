@@ -23,7 +23,7 @@ function Roadmap() {
 
   const fetchPageData = useCallback(async () => {
     try {
-      const response = await fetch('http://brainwave.local/wp-json/wp/v2/pages/74');
+      const response = await fetch('http://brainwave.local/wp-json/wp/v2/pages/74?acf_format=standard');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
