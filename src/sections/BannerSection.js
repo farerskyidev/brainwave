@@ -1,9 +1,5 @@
 import React from 'react';
 import plus from "../images/plus.svg";
-import logo_1 from "../images/logo_1.png";
-import logo_2 from "../images/logo_2.png";
-import logo_3 from "../images/logo_3.png"; 
-import logo_4 from "../images/logo_4.png";
 import line from "./../images/line.svg"; 
 
 const BannerSection = ({ data }) => {
@@ -12,12 +8,12 @@ const BannerSection = ({ data }) => {
   }
 
   const { acf } = data;
-  const { banner_home_image, banner_home_text, banner_home_title, banner_home_title_span } = acf;
+  const { banner_home_image, banner_home_text, banner_home_title, banner_home_title_span, banner_home_logos } = acf;
 
   const imageUrl = typeof banner_home_image === 'string' ? banner_home_image : null;
 
   return (
-    <section className='bg-color pt-14 m:pt-20 x:pt-28 relative'>    
+    <section className='bg-color py-14 m:py-20 x:py-28 relative'>    
       <div className="text-center banner-wrapp z-10 relative">
         <div className="max-w-4xl mx-auto">
           <h1 className='text-6xl leading-[4.5rem]'>
@@ -53,10 +49,11 @@ const BannerSection = ({ data }) => {
           <p className='text-whiteColor-50 mb-16 text-xs uppercase'>{data.acf.banner_home_text_second}</p>
         )}
         <div className='flex justify-center xl:gap-x-24 gap-x-16'>
-          <img className="" src={logo_1} alt="Logo 1" />
-          <img className="" src={logo_2} alt="Logo 2" />
-          <img className="" src={logo_3} alt="Logo 3" />
-          <img className="" src={logo_4} alt="Logo 4" />
+        {banner_home_logos.map((item, index) =>
+          <div key={index}>
+            <img className="" src={item.logo.url} alt="Logo" />
+          </div>
+        )}
         </div>
       </div>
       <img className="absolute left-2.5 top--5 z-10" src={plus} alt="plus" /> 
