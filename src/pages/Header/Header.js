@@ -15,14 +15,14 @@ const Header = () => {
     <header className="bg-color relative z-10">
       <div className="headerWrapper w-1920">
         <div className="grid-x grid-padding-x size-full items-center py-5 relative">
-          <div className="cell large-3">
+          <div className="cell large-3 medium-3 small-12">
             <div>
               <a href="/">
                 <img src={logo} alt="logo" />
               </a>
             </div>
           </div>
-          <div className="cell large-9 mt-10 m:mt-0">
+          <div className="cell large-9 medium-9 small-12 mt-10 m:mt-0">
             <nav className="items-center" >
               <ul className={`block m:flex justify-end font-semibold menu items-center ${isMenuOpen ? 'block' : 'hidden'}`}>
                 <li className="text-whiteColor-50 px-0 m:px-2 x:px-6 xl:px-8 2xl:px-12">
@@ -39,7 +39,7 @@ const Header = () => {
                 </li>
                 
                 
-                  <li className="text-whiteColor-50 justify-start grid">
+                  <li className="text-whiteColor-50 justify-start grid sm:mt-4">
                     <div className="rounded-xl w-fit margin-a">
                       <div className="border-gradient-cut rounded-xl w-fit margin-a">
                         <div className="border-gradient-content-cut">

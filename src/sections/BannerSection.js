@@ -13,7 +13,7 @@ const BannerSection = ({ data }) => {
   const imageUrl = typeof banner_home_image === 'string' ? banner_home_image : null;
 
   return (
-    <section className='bg-color py-14 m:py-20 x:py-28 relative'>    
+    <section className='bg-color py-14 m:py-20 x:py-28 relative px-4'>    
       <div className="text-center banner-wrapp z-10 relative">
         <div className="max-w-4xl mx-auto">
           <h1 className='text-6xl leading-[4.5rem]'>
@@ -79,6 +79,7 @@ const BannerSection = ({ data }) => {
           </filter>
         </defs>
       </svg>
+
       <svg className='banner_bg_2' width="1248" height="1248" viewBox="0 0 1248 1248" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle opacity="0.05" cx="624" cy="624" r="623.5" stroke="#CAC6DD"/>
         <circle opacity="0.1" cx="624" cy="624" r="526.5" stroke="#CAC6DD"/>
@@ -86,6 +87,9 @@ const BannerSection = ({ data }) => {
         <circle opacity="0.1" cx="624" cy="624" r="288.5" stroke="#CAC6DD"/>
         <circle opacity="0.1" cx="624" cy="624" r="184.5" stroke="#CAC6DD"/>
       </svg>
+      
+      
+
     </section> 
   );
 }

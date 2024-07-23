@@ -69,7 +69,7 @@ const SliderCards = () => {
   }
 
   return (
-    <section className='bg-color pt-28 relative overflow-hidden'>
+    <section className='bg-color pt-28 relative overflow-hidden px-4'>
       <div className="max-w-2xl mx-auto">
         <h2 className='text-5xl text-left m:text-center leading-[3.75rem]'>{pageData.acf.slider_cards_title}</h2>
       </div>

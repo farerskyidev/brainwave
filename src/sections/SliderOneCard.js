@@ -12,7 +12,7 @@ const SliderOneCard = ({ data }) => {
     }
 
     return (
-    <section className='bg-color relative overflow-hidden py-20 xl:pt-136 2xl:pt-40 slider-section-second'>
+    <section className='bg-color relative overflow-hidden py-20 xl:pt-136 2xl:pt-40 slider-section-second px-4'>
         <div className="grid-x grid-padding-x items-center relative w-1440">
             <div className="cell large-6"> 
                 <div className="max-w-2xl mx-auto mb-20 max-w-sm">

@@ -13,7 +13,7 @@ const Unlock = ({ data }) => {
   const imageUrl = typeof unlock_image === 'string' ? unlock_image : null;
 
   return (
-    <section className='bg-color pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden'>
+    <section className='bg-color pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden px-4'>
       <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
         <div className="cell large-6">
           {imageUrl ? (
