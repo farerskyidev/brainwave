@@ -441,13 +441,14 @@ header {
 
 .gradient-pre-footer_2 {
   mask-type: luminance;
-  mask-image: radial-gradient(circle at center, white -70%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at center, white -70%, transparent 70%);
+  mask-image: radial-gradient(circle at center, white -70%, transparent 70%); 
   position: absolute;
   height: auto;
   width: -moz-fit-content;
   width: fit-content;
   top: calc(50% - 300px);
-  left: calc(50% - 300px);
+  left: calc(50% - 300px); 
 }
 
 .banner_bg {

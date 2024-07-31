@@ -12,12 +12,12 @@ export const Footer = () => {
       
         <div className="w-1920">
           <div className="grid-x grid-padding-x size-full items-center py-5 relative border-bt">
-            <div className="cell large-6">
+            <div className="cell large-3">
               <div>
                   <a className="justify-center flex x:justify-start" href="/"><img src={logo} alt="logo" /></a>  
               </div>
             </div> 
-            <div className="cell large-6">
+            <div className="cell large-9">
               <nav>
                 <ul className="flex justify-end font-semibold hidden x:flex menu">
                   <li className='text-whiteColor-50 m:px-2 x:px-6 xl:px-8 2xl:px-12'><NavLink to="/features">Features</NavLink></li>
@@ -33,7 +33,7 @@ export const Footer = () => {
               <p className="text-oldLavender text-sm hidden x:flex">© 2023 UI8</p>
             </div> 
             <div className="cell large-6">
-            <ul className="gap-x-12 flex font-semibold justify-center x:justify-end">
+            <ul className="gap-x-8 m:gap-x-12 flex font-semibold justify-center x:justify-end">
                 <li className='footer_icon'>
                   <a href="/">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
