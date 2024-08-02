@@ -39,7 +39,7 @@ const Header = () => {
                 </li>
                 
                 
-                  <li className="text-whiteColor-50 justify-start grid sm:mt-4">
+                  <li className="text-whiteColor-50 justify-start grid sm:mt-4 m:mt-0">
                     <div className="rounded-xl w-fit margin-a">
                       <div className="border-gradient-cut rounded-xl w-fit margin-a">
                         <div className="border-gradient-content-cut">

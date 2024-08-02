@@ -8,7 +8,8 @@ import ContactForm from './ContactForm';
 const Prefooter = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const openPopup = () => {
+  const openPopup = (e) => {
+    e.preventDefault();
     setIsPopupOpen(true);
   };
 
@@ -32,7 +33,7 @@ const Prefooter = () => {
             <div className="rounded-xl w-fit margin-a">
               <div className="border-gradient-cut-none-border rounded-xl w-fit margin-a">
                 <button className="text-bgColor px-7 py-4 font-extrabold rounded-xl relative z-10 bg-whiteColor hover:opacity-[.80]" onClick={openPopup}> 
-                  <a href="/">get started</a>
+                  get started
                 </button>
               </div>
             </div>
