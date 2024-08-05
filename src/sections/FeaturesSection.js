@@ -9,7 +9,7 @@ const FeaturesSection = ({data}) => {
   const { features_repeater, features_section_title, features_section_text  } = acf;
 
   return (
-    <section className='bg-color relative overflow-hidden pb-20 pt-20'>
+    <section className='relative overflow-hidden pb-20 pt-20' data-aos="fade-up">
       <div className="grid-x grid-padding-x justify-center py-5 relative w-1440 items-center justify-between">
         <div className="cell large-6 medium-6 small-12 max-w-lg">
           <h1>{features_section_title}</h1>

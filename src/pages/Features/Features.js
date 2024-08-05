@@ -58,7 +58,7 @@ function Features() {
   }, [fetchPageData]);
 
   if (loading) {
-    return <div></div>;
+    return;
   }
 
   return ( 

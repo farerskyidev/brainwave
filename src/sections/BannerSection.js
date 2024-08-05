@@ -13,7 +13,7 @@ const BannerSection = ({ data }) => {
   const imageUrl = typeof banner_home_image === 'string' ? banner_home_image : null;
 
   return (
-    <section className='bg-color py-14 m:py-20 x:py-28 relative px-4'>    
+    <section className='py-14 m:py-20 x:py-28 relative px-4' data-aos="fade-up">    
       <div className="text-center banner-wrapp z-10 relative">
         <div className="max-w-4xl mx-auto">
           <h1 className='text-6xl leading-[4.5rem]'>
@@ -72,8 +72,8 @@ const BannerSection = ({ data }) => {
           </g>
         </g>
         <defs>
-          <filter id="filter0_f_707_26229" x="-225.119" y="-251.703" width="1624.47" height="1441.78" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <filter id="filter0_f_707_26229" x="-225.119" y="-251.703" width="1624.47" height="1441.78" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
             <feGaussianBlur stdDeviation="141.406" result="effect1_foregroundBlur_707_26229"/>
           </filter>

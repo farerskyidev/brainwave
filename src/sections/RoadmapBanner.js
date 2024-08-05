@@ -21,7 +21,7 @@ const RoadmapBanner = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return;
   }
 
   if (!pageData) {
@@ -34,7 +34,7 @@ const RoadmapBanner = () => {
   const imageUrl = typeof roadmap_banner_image === 'string' ? roadmap_banner_image : null;
 
   return (
-    <section className='bg-color pt-14 m:pt-20 x:pt-28 relative'>    
+    <section className='pt-14 m:pt-20 x:pt-28 relative' data-aos="fade-up">    
       <div className="text-center banner-wrapp">
         <div className="max-w-4xl mx-auto">
           <h1 className='text-6xl leading-[4.5rem]'>{roadmap_banner_title}</h1>

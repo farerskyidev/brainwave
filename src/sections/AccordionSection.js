@@ -40,7 +40,7 @@ const AccordionSection = () => {
     }
 
     return (
-    <section className='bg-color pt-28 relative'>
+    <section className='pt-28 relative' data-aos="fade-up">
         <div className="grid-x grid-padding-x w-1440">
         <div className="cell large-6 medium-6 small-12">
             <div className="max-w-lg mb-16">

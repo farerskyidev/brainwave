@@ -18,7 +18,7 @@ const Prefooter = () => {
   };
 
   return (
-    <section className='bg-color relative overflow-hidden py-1.5 px-4'>
+    <section className='relative overflow-hidden py-1.5 px-4' data-aos="fade-up">
       <div className='pb-40 pt-40 ml-4 mr-4 relative border border-customBorder'>
         <div className="grid-x grid-padding-x justify-center py-5 relative w-1920">
           <div className='max-w-2xl text-center z-10'>

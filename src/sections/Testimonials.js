@@ -59,7 +59,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className='bg-color pt-28 relative overflow-hidden pb-40'>
+    <section className='pt-28 relative overflow-hidden pb-40' data-aos="fade-up">
       <div className="mx-auto mb-16 text-center">
         <span className='text-purpleColor relative px-4 text-xs roadmap-span z-10'> 
           <img className="absolute top-0 left-0" src={bracket_2} alt="bracket_2" /> 

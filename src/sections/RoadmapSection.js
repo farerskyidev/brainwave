@@ -7,7 +7,7 @@ const RoadmapSection = ({ data }) => {
   const { roadmap } = acf;
 
   return (
-    <section className='bg-color relative overflow-hidden pb-20 pt-20'>
+    <section className='relative overflow-hidden pb-20 pt-20' data-aos="fade-up">
       <div className="grid-x grid-padding-x relative w-1440 pt-20">
         {roadmap.map((item, index) => ( 
           <div key={index} className="cell large-12 medium-12 small-12">

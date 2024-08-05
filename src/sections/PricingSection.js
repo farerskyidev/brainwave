@@ -21,7 +21,7 @@ const PricingSection = () => {
   }, []);
 
   if (loading) {
-    return <p>Завантаження...</p>;
+    return;
   }
 
   if (!pageData) {
@@ -32,7 +32,7 @@ const PricingSection = () => {
   const { pricing_title_banner, pricing_text_banner, pricing_image_banner } = acf;
 
   return (
-    <section className='bg-color pt-14 m:pt-20 x:pt-28 relative'>    
+    <section className='pt-14 m:pt-20 x:pt-28 relative' data-aos="fade-up">    
       <div className="text-center banner-wrapp">
         <div className="max-w-4xl mx-auto">
           <h1 className='text-6xl leading-[4.5rem]'>{pricing_title_banner}</h1>

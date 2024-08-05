@@ -11,7 +11,7 @@ const Colaboration = ({data}) => {
 
   const imageUrl = typeof сolaboration_image === 'string' ? сolaboration_image : null;
   return (
-    <section className='bg-color pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden py-1.5 px-4'>
+    <section className='pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden py-1.5 px-4' data-aos="fade-up">
       <div className="grid-x grid-padding-x items-center py-5 relative w-1440 border-customBorder">
         <div className="cell large-6">
           <div className="max-w-2xl mx-auto mb-20 max-w-sm">

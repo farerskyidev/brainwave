@@ -25,7 +25,7 @@ function HowToUse() {
   }, []);
   
   if (loading) {
-    return <p>Loading...</p>;
+    return;
   }
   
   if (!pageData) {

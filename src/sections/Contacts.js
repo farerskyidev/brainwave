@@ -13,7 +13,7 @@ const Contacts = ({data}) => {
   const imageUrl = typeof image_contacts === 'string' ? image_contacts : null;
 
   return (
-    <section className='bg-color relative overflow-hidden pb-28 pt-28 justify-between'>
+    <section className='relative overflow-hidden pb-28 pt-28 justify-between' data-aos="fade-up">
       <div className="grid-x grid-padding-x justify-center py-5 relative w-1440 items-center">
         <div className="cell large-6 medium-6 small-12">
           {imageUrl ? (

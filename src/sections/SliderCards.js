@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios'; // Import axios
+import axios from 'axios';
 import icon_01 from "../images/01.png";
 import chevron_right from "../images/chevron-right.svg";
 import hover_image from "../images/hover_image.png";
 import { Link } from 'react-router-dom';
-import plus from "../images/plus.svg";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const SliderCards = () => {
   const [pageData, setPageData] = useState(null);
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -48,7 +50,6 @@ const SliderCards = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-
         setPageData({ ...data, acf: { ...data.acf } });
         setLoading(false);
       } catch (error) {
@@ -56,31 +57,31 @@ const SliderCards = () => {
         setLoading(false);
       }
     };
-    
+
     fetchPageData();
   }, []);
-    
+
   if (loading) {
-    return <p></p>;
+    return <p>Loading...</p>;
   }
-    
+
   if (!pageData) {
-    return <p></p>;
+    return <p>No data available</p>;
   }
 
   return (
-    <section className='bg-color pt-28 relative overflow-hidden px-4'>
+    <section className='pt-28 relative overflow-hidden px-4' data-aos="fade-up">
       <div className="max-w-2xl mx-auto">
         <h2 className='text-5xl text-left m:text-center leading-[3.75rem]'>{pageData.acf.slider_cards_title}</h2>
       </div>
-      <div className="grid-x grid-padding-x items-center relative w-1440 slider-section py-10 m:py-20 z-20"> 
+      <div className="grid-x grid-padding-x items-center relative w-1440 slider-section py-10 m:py-20 z-20">
         <div className='pl-20'>
           <Swiper
             spaceBetween={50}
             slidesPerView={4}
             loop
-            navigation={true}
-            pagination={{ clickable: true }}
+            pagination={{ clickable: true, el: '.custom-pagination' }}
+            modules={[Pagination, Navigation]}
           >
             {posts.map(post => (
               <SwiperSlide key={post.id}>
@@ -89,20 +90,20 @@ const SliderCards = () => {
                     <div className='z-10 flex flex-wrap h-full relative'>
                       <div>
                         <h5 className='text-2xl mb-5'>{post.title.rendered}</h5>
-                        <div className='text-purpleColor' dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} ></div>  
+                        <div className='text-purpleColor' dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} ></div>
                       </div>
                       <div className='flex items-end w-full'>
                         <div className='w-full flex items-center justify-between'>
-                          <img className="" src={icon_01} alt="icon_01" />
+                          <img className="" src={icon_01} alt="Icon" />
                           <Link to={`/post/${post.id}`} className="explore-button flex items-center gap-5 text-xs">
-                            Explore More <img src={chevron_right} alt="chevron_right" />
+                            Explore More <img src={chevron_right} alt="Chevron right" />
                           </Link>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className='absolute hidden'>
-                    <img src={hover_image} alt="hover_image"/>
+                    <img src={hover_image} alt="Hover image" />
                   </div>
                 </article>
               </SwiperSlide>
@@ -143,8 +144,8 @@ const SliderCards = () => {
             </filter>
           </defs>
         </svg>
-      </div> 
-
+        <div className="custom-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal justify-center flex pt-4"></div>
+      </div>
     </section>
   );
 }

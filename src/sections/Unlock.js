@@ -13,21 +13,21 @@ const Unlock = ({ data }) => {
   const imageUrl = typeof unlock_image === 'string' ? unlock_image : null;
 
   return (
-    <section className='bg-color pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden px-4'>
+    <section className='pb-20 xl:pb-136 2xl:pb-40 relative overflow-hidden px-4' data-aos="fade-up">
       <div className="grid-x grid-padding-x items-center py-5 relative w-1440">
         <div className="cell large-6">
           {imageUrl ? (
-            <img className='rounded-xl' src={imageUrl} alt="Banner Image" />
+            <img className='rounded-xl' src={imageUrl} alt="Descriptive alt text for banner image" />
           ) : (
             <p>Image not available</p>
           )}
         </div>
         <div className="cell large-6">
           <div className="max-w-2xl mx-auto mb-20 max-w-xl">
-            <span className='text-purpleColor relative px-4 text-xs roadmap-span z-10'>
-              <img className="absolute top-0 left-0" src={bracket_2} alt="bracket_2" />
+            <span className='text-purpleColor relative px-4 text-xs roadmap-span z-10'> 
+              <img className="absolute top-0 left-0" src={bracket_2} alt="" />
               {unlock_subtitle}
-              <img className="absolute top-0 right-0" src={bracket_1} alt="bracket_1" />
+              <img className="absolute top-0 right-0" src={bracket_1} alt="" />
             </span>
             <h2 className='text-5xl leading-[3.75rem] mb-6 mt-6'>{unlock_title}</h2>
             <p className='text-x text-purpleColor2 mb-10'>{unlock_text}</p>

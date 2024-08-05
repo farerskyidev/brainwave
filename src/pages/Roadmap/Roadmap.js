@@ -58,7 +58,7 @@ function Roadmap() {
   }, [fetchPageData]);
 
   if (loading) {
-    return <div></div>;
+    return;
   }
 
   return (

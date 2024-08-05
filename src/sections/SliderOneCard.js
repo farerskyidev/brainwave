@@ -12,7 +12,7 @@ const SliderOneCard = ({ data }) => {
     }
 
     return (
-    <section className='bg-color relative overflow-hidden py-20 xl:pt-136 2xl:pt-40 slider-section-second px-4'>
+    <section className='relative overflow-hidden py-20 xl:pt-136 2xl:pt-40 slider-section-second px-4' data-aos="fade-up">
         <div className="grid-x grid-padding-x items-center relative w-1440">
             <div className="cell large-6"> 
                 <div className="max-w-2xl mx-auto mb-20 max-w-sm">
@@ -34,7 +34,7 @@ const SliderOneCard = ({ data }) => {
                 <Swiper
                     spaceBetween={50}
                     slidesPerView={1}            
-                    navigation={true}
+                    // navigation={true}
                     pagination={{ clickable: true }}
                 > 
                     <SwiperSlide className='pl-16 pb-16'>
